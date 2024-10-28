@@ -114,7 +114,7 @@ The result made by Debian 11 amd64 is guaranteed to work.
 1.  Install mingw-w64 and all other required dependencies.
 
     ```sh
-    sudo apt-get install -y libssl-dev libglib2.0-dev pkg-config cmake build-essential libclang-dev libgtk-3-dev librust-alsa-sys-dev libasound2-dev curl wget git mingw-w64 clang nsis python3-pip python3-dev
+    sudo apt-get install -y libssl-dev libglib2.0-dev pkg-config cmake build-essential libclang-dev libgtk-3-dev librust-alsa-sys-dev libasound2-dev curl wget git mingw-w64 clang nsis python3-pip python3-dev p7zip-full
     pip install mako semver toml
     ```
 
