@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Trill
-Icon=tango
-Exec=tango
+Icon=trill
+Exec=trill
 Categories=Game;
 Terminal=false

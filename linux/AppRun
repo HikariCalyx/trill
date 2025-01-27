@@ -3,11 +3,11 @@ set -e
 
 cd "$(dirname "$0")"
 
-tango_bin_path="$(pwd)/$(uname -m)/bin"
+trill_bin_path="$(pwd)/$(uname -m)/bin"
 
-PATH="${tango_bin_path}:${PATH}"
+PATH="${trill_bin_path}:${PATH}"
 export PATH
 
 export WINIT_X11_SCALE_FACTOR="${WINIT_X11_SCALE_FACTOR:-1}"
 
-exec "${tango_bin_path}/tango"
+exec "${trill_bin_path}/trill"
