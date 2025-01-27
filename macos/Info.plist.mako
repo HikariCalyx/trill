@@ -21,7 +21,7 @@ version = semver.Version.parse(cargo_toml["package"]["version"])
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundleName</key>
-		<string>Tango</string>
+		<string>Trill</string>
 		<key>CFBundleIconFile</key>
 		<string>Tango.icns</string>
 		<key>CFBundlePackageType</key>

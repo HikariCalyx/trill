@@ -46,5 +46,5 @@ makensis installer.nsi
 popd
 
 mkdir -p dist
-mv tango_win_workdir/installer.exe "dist/tango-i686-windows.exe"
+mv tango_win_workdir/installer.exe "dist/trill-i686-windows.exe"
 rm -rf tango_win_workdir

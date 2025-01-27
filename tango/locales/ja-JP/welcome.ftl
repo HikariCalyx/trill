@@ -1,5 +1,5 @@
-welcome-heading = Tangoへようこそ！
-welcome-description = 対戦できる前にTangoの初期設定をガイドしていきます。
+welcome-heading = トリルへようこそ！
+welcome-description = 対戦できる前にトリルの初期設定をガイドしていきます。
 welcome-step-1 = 「ロックマンエグゼ アドバンスドコレクション」検出
 welcome-step-1-description = 「ロックマンエグゼ アドバンスドコレクション」をSteamにインストールする必要があります。
 welcome-step-1-roms = 吸い出し済みのROMを追加

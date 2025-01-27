@@ -37,5 +37,5 @@ ln -s i686 i386
 ln -s i686 x86_64
 ln -s i686 amd64
 cd ..
-./appimagetool-i686.AppImage tango_linux_workdir "dist/tango-${target_arch}-linux.AppImage"
+./appimagetool-i686.AppImage tango_linux_workdir "dist/trill-${target_arch}-linux.AppImage"
 rm -rf tango_linux_workdir

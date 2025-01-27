@@ -12,7 +12,7 @@ use tokio::io::AsyncWriteExt;
 
 use crate::{config, version};
 
-const GITHUB_RELEASES_URL: &str = "https://api.github.com/repos/tangobattle/tango/releases";
+const GITHUB_RELEASES_URL: &str = "https://api.github.com/repos/HikariCalyx/trill/releases";
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct Release {
@@ -266,7 +266,7 @@ impl Updater {
                                 Ok::<_, anyhow::Error>(
                                     client
                                         .get(GITHUB_RELEASES_URL)
-                                        .header("User-Agent", "tango")
+                                        .header("User-Agent", "Trill/1.0")
                                         .send()
                                         .await?
                                         .json::<Vec<GithubReleaseInfo>>()

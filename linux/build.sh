@@ -31,5 +31,5 @@ chmod a+x "tango_linux_workdir/${target_arch}/bin/ffmpeg"
 
 # Build AppImage.
 mkdir -p dist
-./appimagetool-x86_64.AppImage tango_linux_workdir "dist/tango-${target_arch}-linux.AppImage"
+./appimagetool-x86_64.AppImage tango_linux_workdir "dist/trill-${target_arch}-linux.AppImage"
 rm -rf tango_linux_workdir

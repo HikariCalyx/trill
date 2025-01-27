@@ -1,4 +1,4 @@
-welcome-heading = Welcome to Tango!
+welcome-heading = Welcome to Trill!
 welcome-description = There's just a few steps you'll need to complete before you can start playing.
 
 welcome-step-1 = Detect Mega Man Battle Network Legacy Collection

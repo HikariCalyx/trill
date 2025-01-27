@@ -176,14 +176,14 @@ fn get_project_dirs() -> Option<directories_next::ProjectDirs> {
 
 fn get_config_path() -> Result<std::path::PathBuf, anyhow::Error> {
     Ok(get_project_dirs()
-        .ok_or_else(|| anyhow::anyhow!("could not get tango project directory"))?
+        .ok_or_else(|| anyhow::anyhow!("could not get trill project directory"))?
         .config_dir()
         .join("config.json"))
 }
 
 pub fn get_updater_path() -> Result<std::path::PathBuf, anyhow::Error> {
     Ok(get_project_dirs()
-        .ok_or_else(|| anyhow::anyhow!("could not get tango project directory"))?
+        .ok_or_else(|| anyhow::anyhow!("could not get trill project directory"))?
         .cache_dir()
         .join("updater"))
 }
@@ -197,7 +197,7 @@ impl Config {
 
         let tango_data_dir = user_dirs
             .document_dir()
-            .ok_or_else(|| anyhow::anyhow!("could not get tango data directory"))?
+            .ok_or_else(|| anyhow::anyhow!("could not get trill data directory"))?
             .join(DATA_DIR_NAME);
 
         let sys_language: unic_langid::LanguageIdentifier = sys_locale::get_locale()

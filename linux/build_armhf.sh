@@ -37,5 +37,5 @@ ln -s armv7 aarch64
 ln -s armv7 armv7l
 ln -s armv7 armhf
 cd ..
-./appimagetool-armhf.AppImage tango_linux_workdir "dist/tango-${target_arch}-linux.AppImage"
+./appimagetool-armhf.AppImage tango_linux_workdir "dist/trill-${target_arch}-linux.AppImage"
 rm -rf tango_linux_workdir

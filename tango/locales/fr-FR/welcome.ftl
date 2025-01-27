@@ -1,4 +1,4 @@
-welcome-heading = Bienvenue à Tango !
+welcome-heading = Bienvenue à Trill !
 welcome-description = Il vous reste quelque étapes que vous devrez compléter avant de pouvoir commencer à jouer.
 welcome-step-1 = Détecter Mega Man Battle Network Legacy Collection
 welcome-step-1-description = Vous devez avoir installé Mega Man Battle Network Legacy Collection sur Steam.
