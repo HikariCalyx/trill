@@ -30,7 +30,7 @@ tools/mako_generate.py "$(dirname "${BASH_SOURCE[0]}")/installer_i686.nsi.mako" 
 pushd tango_win_workdir
 
 cp ../tango/icon.ico .
-cp ../target/i686-pc-windows-gnu/release/tango.exe .
+cp ../target/i686-pc-windows-gnu/release/tango.exe ./trill.exe
 cp {/usr/i686-w64-mingw32/lib/libwinpthread-1.dll,/usr/lib/gcc/i686-w64-mingw32/10-posix/{libgcc_s_dw2-1.dll,libstdc++-6.dll}} .
 
 # Chrome 109.0.5414.120 installer is used here, since it's the last version that supports Windows 7 and 8

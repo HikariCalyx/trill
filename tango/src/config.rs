@@ -171,7 +171,7 @@ impl Default for Config {
 }
 
 fn get_project_dirs() -> Option<directories_next::ProjectDirs> {
-    directories_next::ProjectDirs::from("net.n1gp", "", "Tango")
+    directories_next::ProjectDirs::from("com.hikaricalyx", "", "Trill")
 }
 
 fn get_config_path() -> Result<std::path::PathBuf, anyhow::Error> {
@@ -188,7 +188,7 @@ pub fn get_updater_path() -> Result<std::path::PathBuf, anyhow::Error> {
         .join("updater"))
 }
 
-const DATA_DIR_NAME: &str = "Tango";
+const DATA_DIR_NAME: &str = "Trill";
 
 impl Config {
     pub fn system_defaults() -> Result<Self, anyhow::Error> {

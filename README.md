@@ -73,10 +73,11 @@ We assume you're using Ubuntu or Debian.
     rustup toolchain install stable-x86_64-pc-windows-gnu
     ```
 
-1.  Install mingw-w64.
+1.  Install mingw-w64 and all other required dependencies.
 
     ```sh
-    sudo apt-get install -y mingw-w64
+    sudo apt-get install -y libssl-dev libglib2.0-dev pkg-config cmake build-essential libclang-dev libgtk-3-dev librust-alsa-sys-dev libasound2-dev curl wget git mingw-w64 clang nsis python3-pip python3-dev p7zip-full imagemagick
+    pip install mako semver toml
     ```
 
 1.  Ensure mingw-w64 is using the POSIX threading model.
@@ -93,7 +94,7 @@ We assume you're using Ubuntu or Debian.
 1.  Build it.
 
     ```sh
-    cargo build --target x86_64-pc-windows-gnu --release --bin tango
+   bash ./win/build.sh
     ```
 
 ## Building (32Bit Windows Binary)
@@ -116,7 +117,7 @@ The result made by Debian 11 amd64 is guaranteed to work.
 1.  Install mingw-w64 and all other required dependencies.
 
     ```sh
-    sudo apt-get install -y libssl-dev libglib2.0-dev pkg-config cmake build-essential libclang-dev libgtk-3-dev librust-alsa-sys-dev libasound2-dev curl wget git mingw-w64 clang nsis python3-pip python3-dev p7zip-full
+    sudo apt-get install -y libssl-dev libglib2.0-dev pkg-config cmake build-essential libclang-dev libgtk-3-dev librust-alsa-sys-dev libasound2-dev curl wget git mingw-w64 clang nsis python3-pip python3-dev p7zip-full imagemagick
     pip install mako semver toml
     ```
 

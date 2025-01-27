@@ -73,7 +73,7 @@ Function un.onGUIInit
 FunctionEnd
 
 Function .onInstSuccess
-    Exec "$INSTDIR\\tango.exe"
+    Exec "$INSTDIR\\trill.exe"
 FunctionEnd
 
 Section
@@ -85,10 +85,10 @@ Section
     File "libgcc_s_dw2-1.dll"
     File "libwinpthread-1.dll"
     File "ffmpeg.exe"
-    File "tango.exe"
+    File "trill.exe"
     WriteUninstaller "$INSTDIR\\uninstall.exe"
     WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "DisplayName" "<%text>$</%text>{NAME}"
-    WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "DisplayIcon" "$INSTDIR\\tango.exe,0"
+    WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "DisplayIcon" "$INSTDIR\\trill.exe,0"
     WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "Publisher" "The Trill Developers"
     WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "InstallLocation" "$INSTDIR"
 
@@ -108,8 +108,8 @@ Section
 
     WriteRegDWORD HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "NoModify" 1
     WriteRegDWORD HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "NoRepair" 1
-    CreateShortcut "$SMPROGRAMS\\Trill.lnk" "$INSTDIR\\tango.exe"
-    CreateShortcut "$DESKTOP\\Trill.lnk" "$INSTDIR\\tango.exe"
+    CreateShortcut "$SMPROGRAMS\\Trill.lnk" "$INSTDIR\\trill.exe"
+    CreateShortcut "$DESKTOP\\Trill.lnk" "$INSTDIR\\trill.exe"
 SectionEnd
 
 Section "uninstall"
@@ -122,7 +122,7 @@ Section "uninstall"
     Delete "$INSTDIR\\libgcc_s_seh-1.dll"
     Delete "$INSTDIR\\libwinpthread-1.dll"
     Delete "$INSTDIR\\ffmpeg.exe"
-    Delete "$INSTDIR\\tango.exe"
+    Delete "$INSTDIR\\trill.exe"
     Delete "$INSTDIR\\uninstall.exe"
     RMDir $INSTDIR
     DeleteRegKey HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}"

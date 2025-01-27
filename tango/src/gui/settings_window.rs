@@ -682,7 +682,7 @@ fn show_advanced_tab(ui: &mut egui::Ui, config: &mut config::Config, shared_root
 
 fn show_about_tab(ui: &mut egui::Ui) {
     egui::ScrollArea::vertical().auto_shrink([false; 2]).show(ui, |ui| {
-        ui.heading(format!("Tango {}", version::current()));
+        ui.heading(format!("Trill {}", version::current()));
 
         ui.add_space(8.0);
         ui.vertical_centered(|ui| {
@@ -694,7 +694,7 @@ fn show_about_tab(ui: &mut egui::Ui) {
 
         ui.horizontal_wrapped(|ui| {
             ui.spacing_mut().item_spacing.x = 0.0;
-            ui.hyperlink_to("Tango", "https://tango.n1gp.net");
+            ui.hyperlink_to("Trill", "https://trill.hikaricalyx.com");
             ui.label(" would not be a reality without the work of the many people who have helped make this possible.");
         });
 
@@ -832,7 +832,7 @@ fn show_about_tab(ui: &mut egui::Ui) {
             ui.horizontal(|ui| {
                 ui.spacing_mut().item_spacing.x = 0.0;
                 ui.label(" • ");
-                ui.hyperlink_to("Countless open source projects", "https://tango.n1gp.net/licenses");
+                ui.hyperlink_to("Countless open source projects", "https://trill.hikaricalyx.com/licenses");
             });
         });
 
@@ -1029,13 +1029,13 @@ fn show_about_tab(ui: &mut egui::Ui) {
 
         ui.horizontal_wrapped(|ui| {
             ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label("Tango is licensed under the terms of the ");
+            ui.label("Trill is licensed under the terms of the ");
             ui.hyperlink_to(
                 "GNU Affero General Public License v3",
                 "https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)",
             );
             ui.label(". That means you’re free to modify the ");
-            ui.hyperlink_to("source code", "https://github.com/tangobattle");
+            ui.hyperlink_to("source code", "https://github.com/HikariCalyx/trill");
             ui.label(", as long as you contribute your changes back!");
         });
     });
