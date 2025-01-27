@@ -28,7 +28,7 @@ pub enum Status {
     ReadyToUpdate { release: Release },
 }
 
-#[derive(serde::Deserialize)]-
+#[derive(serde::Deserialize)]
 struct GithubReleaseAssetInfo {
     name: String,
     browser_download_url: String,
