@@ -94,7 +94,7 @@ We assume you're using Ubuntu or Debian.
 1.  Build it.
 
     ```sh
-   bash ./win/build.sh
+    bash ./win/build.sh
     ```
 
 ## Building (32Bit Windows Binary)
