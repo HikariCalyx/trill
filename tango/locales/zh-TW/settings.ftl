@@ -28,6 +28,7 @@ settings-input-delay = 輸入延遲
 settings-ui-scale = UI縮放
 settings-max-queue-length = 最大隊列長度
 settings-matchmaking-endpoint = 配對伺服器端點
+settings-matchmaking-usetango = 使用 Tango 的缺省配對伺服器
 settings-replaycollector-endpoint = 回放收集器端點
 settings-patch-repo = 補丁倉庫
 settings-enable-patch-autoupdate = 自動更新

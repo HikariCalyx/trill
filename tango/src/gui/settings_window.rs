@@ -534,6 +534,9 @@ fn show_netplay_tab(ui: &mut egui::Ui, config: &mut config::Config) {
                         ""
                     }),
             );
+            if ui.add(egui::Button::new(i18n::LOCALES.lookup(&config.language, "settings-matchmaking-usetango").unwrap())).clicked() {
+                let config.matchmaking_endpoint = "wss://matchmaking.tango.n1gp.net";
+            }
             ui.end_row();
 
             {
@@ -994,7 +997,7 @@ fn show_about_tab(ui: &mut egui::Ui) {
                 ui.spacing_mut().item_spacing.x = 0.0;
                 ui.label("Logo: ");
 
-                ui.hyperlink_to("saladdammit", "https://twitter.com/saladdammit");
+                ui.hyperlink_to("To be added", "https://twitter.com/Hikari_Calyx");
             });
         });
 

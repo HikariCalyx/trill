@@ -28,6 +28,7 @@ settings-input-delay = Délai d'entrée
 settings-ui-scale = Échelle du UI
 settings-max-queue-length = Longueur maximale de la queue
 settings-matchmaking-endpoint = Point d'arrivée de matchmaking
+settings-matchmaking-usetango = Utiliser le point de terminaison par défaut de Tango
 settings-replaycollector-endpoint = Point d'arrivée de récolteur de matchs passés
 settings-patch-repo = Dépôt des patchs
 settings-enable-patch-autoupdate = Activer la mise à jour automatique
