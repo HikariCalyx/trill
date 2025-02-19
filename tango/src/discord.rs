@@ -4,7 +4,7 @@ use fluent_templates::Loader;
 
 use crate::{game, i18n};
 
-const APP_ID: u64 = 974089681333534750;
+const APP_ID: u64 = 1341723708565225502;
 
 pub struct GameInfo {
     pub title: String,
