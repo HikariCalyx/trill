@@ -999,7 +999,7 @@ fn show_about_tab(ui: &mut egui::Ui) {
                 ui.spacing_mut().item_spacing.x = 0.0;
                 ui.label("Logo: ");
 
-                ui.hyperlink_to("Shogakukan", "https://www.shogakukan.co.jp/");
+                ui.hyperlink_to("NAKUSAN", "https://space.bilibili.com/303949");
             });
         });
 
