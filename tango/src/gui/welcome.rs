@@ -62,9 +62,9 @@ pub fn show(
                             ui.strong(i18n::LOCALES.lookup(&config.language, "welcome-step-1").unwrap());
                         } else {
                             ui.strong(i18n::LOCALES.lookup(&config.language, "welcome-step-1-unsupported-platform").unwrap());
-                            ui.hyperlink_to(i18n::LOCALES.lookup(&config.language, "welcome-step-1-see-here").unwrap(), "https://github.com/HikariCalyx/trill/wiki/How-to-get-game-ROM-images-legally");                           
+                            ui.hyperlink_to(i18n::LOCALES.lookup(&config.language, "welcome-step-1-see-here").unwrap(), "https://github.com/HikariCalyx/trill/wiki/How-to-get-game-ROM-images-legally");
                         }
-                        
+                    )
                     });
                     if !has_roms {
                         ui.label({
