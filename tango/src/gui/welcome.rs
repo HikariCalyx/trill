@@ -62,11 +62,7 @@ pub fn show(
                             ui.strong(i18n::LOCALES.lookup(&config.language, "welcome-step-1").unwrap());
                         } else {
                             ui.strong(i18n::LOCALES.lookup(&config.language, "welcome-step-1-unsupported-platform").unwrap());
-                            ui.horizontal(|ui| {
-                                ui.spacing_mut().item_spacing.x = 0.0;
-                                ui.label(" • ");
-                                ui.hyperlink_to(i18n::LOCALES.lookup(&config.language, "welcome-step-1-see-here").unwrap(), "https://github.com/HikariCalyx/trill/wiki/How-to-get-game-ROM-images-legally");
-                            });                            
+                            ui.hyperlink_to(i18n::LOCALES.lookup(&config.language, "welcome-step-1-see-here").unwrap(), "https://github.com/HikariCalyx/trill/wiki/How-to-get-game-ROM-images-legally");                           
                         }
                         
                     });
@@ -76,9 +72,6 @@ pub fn show(
                                 .lookup(&config.language, "welcome-step-1-description")
                                 .unwrap()
                         });
-                    }
-                    if cfg!(all(target_os = "windows", target_arch = "x86_64")) || cfg!(all(target_os = "linux", target_arch = "x86_64")) || cfg!(target_os = "macos") {
-
                     }
 
                     ui.add_space(16.0);
