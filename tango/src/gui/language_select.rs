@@ -20,7 +20,7 @@ pub fn show(ui: &mut egui::Ui, font_families: &gui::FontFamilies, language: &mut
         ),
         (
             unic_langid::langid!("ko-KR"),
-            egui::RichText::new("한국어").family(font_families.jpan.egui.clone()),
+            egui::RichText::new("한국어").family(font_families.kore.egui.clone()),
         ),
         (
             unic_langid::langid!("es-419"),
