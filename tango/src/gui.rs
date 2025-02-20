@@ -125,6 +125,7 @@ impl State {
         let font_families = FontFamilies {
             latn: FontFamily::new("Latn", include_bytes!("fonts/NotoSans-Regular.ttf")),
             jpan: FontFamily::new("Jpan", include_bytes!("fonts/NotoSansJP-Regular.otf")),
+            kore: FontFamily::new("Kore", include_bytes!("fonts/NotoSansKR-Regular.ttf")),
             hans: FontFamily::new("Hans", include_bytes!("fonts/NotoSansSC-Regular.otf")),
             hant: FontFamily::new("Hant", include_bytes!("fonts/NotoSansTC-Regular.otf")),
         };
@@ -136,6 +137,7 @@ impl State {
                 (egui::FontFamily::Monospace, vec![]),
                 (font_families.latn.egui.clone(), vec![]),
                 (font_families.jpan.egui.clone(), vec![]),
+                (font_families.kore.egui.clone(), vec![]),
                 (font_families.hans.egui.clone(), vec![]),
                 (font_families.hant.egui.clone(), vec![]),
             ]),
@@ -171,6 +173,10 @@ impl State {
             (
                 "NotoSansJP-Regular".to_string(),
                 egui::FontData::from_static(font_families.jpan.raw),
+            ),
+            (
+                "NotoSansKR-Regular".to_string(),
+                egui::FontData::from_static(font_families.kore.raw),
             ),
             (
                 "NotoSansSC-Regular".to_string(),
@@ -261,6 +267,7 @@ impl FontFamily {
 pub struct FontFamilies {
     latn: FontFamily,
     jpan: FontFamily,
+    kore: FontFamily,
     hans: FontFamily,
     hant: FontFamily,
 }
@@ -271,6 +278,7 @@ impl FontFamilies {
         lang.maximize();
         match lang.script {
             Some(s) if s == unic_langid::subtags::Script::from_str("Jpan").unwrap() => self.jpan.egui.clone(),
+            Some(s) if s == unic_langid::subtags::Script::from_str("Kore").unwrap() => self.kore.egui.clone(),
             Some(s) if s == unic_langid::subtags::Script::from_str("Hans").unwrap() => self.hans.egui.clone(),
             Some(s) if s == unic_langid::subtags::Script::from_str("Hant").unwrap() => self.hant.egui.clone(),
             _ => self.latn.egui.clone(),
@@ -282,6 +290,7 @@ impl FontFamilies {
         lang.maximize();
         match lang.script {
             Some(s) if s == unic_langid::subtags::Script::from_str("Jpan").unwrap() => &self.jpan.fontdue,
+            Some(s) if s == unic_langid::subtags::Script::from_str("Kore").unwrap() => &self.kore.fontdue,
             Some(s) if s == unic_langid::subtags::Script::from_str("Hans").unwrap() => &self.hans.fontdue,
             Some(s) if s == unic_langid::subtags::Script::from_str("Hant").unwrap() => &self.hant.fontdue,
             _ => &self.latn.fontdue,
@@ -292,6 +301,7 @@ impl FontFamilies {
         [
             &self.latn.fontdue,
             &self.jpan.fontdue,
+            &self.kore.fontdue,
             &self.hans.fontdue,
             &self.hant.fontdue,
         ]
@@ -322,6 +332,7 @@ pub fn show(
 
         let primary_font = match language.script {
             Some(s) if s == unic_langid::subtags::Script::from_str("Jpan").unwrap() => "NotoSansJP-Regular",
+            Some(s) if s == unic_langid::subtags::Script::from_str("Kore").unwrap() => "NotoSansKR-Regular",
             Some(s) if s == unic_langid::subtags::Script::from_str("Hans").unwrap() => "NotoSansSC-Regular",
             Some(s) if s == unic_langid::subtags::Script::from_str("Hant").unwrap() => "NotoSansTC-Regular",
             _ => "NotoSans-Regular",
@@ -331,6 +342,7 @@ pub fn show(
             primary_font.to_string(),
             "NotoSans-Regular".to_string(),
             "NotoSansJP-Regular".to_string(),
+            "NotoSansKR-Regular".to_string(),
             "NotoSansSC-Regular".to_string(),
             "NotoSansTC-Regular".to_string(),
             "NotoEmoji-Regular".to_string(),
@@ -347,6 +359,7 @@ pub fn show(
                 (egui::FontFamily::Proportional, proportional),
                 (egui::FontFamily::Monospace, monospace),
                 (font_families.jpan.egui.clone(), vec!["NotoSansJP-Regular".to_string()]),
+                (font_families.kore.egui.clone(), vec!["NotoSansKR-Regular".to_string()]),
                 (font_families.hans.egui.clone(), vec!["NotoSansSC-Regular".to_string()]),
                 (font_families.hant.egui.clone(), vec!["NotoSansTC-Regular".to_string()]),
                 (font_families.latn.egui.clone(), vec!["NotoSans-Regular".to_string()]),
