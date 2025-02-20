@@ -2,12 +2,10 @@ game-exe1 = 록맨 이그제
     .short = EXE1
     .variant-0 = 록맨 이그제
     .match-type-0-0 = 단일
-
 game-bn1 = 록맨 이그제 (영어판)
     .short = BN1
     .variant-0 = 록맨 이그제 (영어판)
     .match-type-0-0 = 단일
-
 game-exe2 = 록맨 이그제 2
     .short = EXE2
     .variant-0 = 록맨 이그제 2
@@ -17,7 +15,6 @@ game-exe2 = 록맨 이그제 2
     .save-custom = 맞춤
     .save-team = 형님
     .save-shield = 방패
-
 game-bn2 = 록맨 이그제 2 (영어판)
     .short = BN2
     .variant-0 = 록맨 이그제 2 (영어판)
@@ -27,7 +24,6 @@ game-bn2 = 록맨 이그제 2 (영어판)
     .save-custom = 맞춤
     .save-team = 형님
     .save-shield = 방패
-
 game-exe3 = 록맨 이그제 3
     .short = EXE3
     .variant-0 = 록맨 이그제 3
@@ -65,7 +61,6 @@ game-exe3 = 록맨 이그제 3
     .save-aqua-bug = 아쿠아 버그
     .save-elec-bug = 일렉트릭 버그
     .save-wood-bug = 나무 버그
-
 game-bn3 = 록맨 이그제 3 (영어판)
     .short = BN3
     .variant-0 = 록맨 이그제 3 (영어판)
@@ -103,7 +98,6 @@ game-bn3 = 록맨 이그제 3 (영어판)
     .save-aqua-bug = 아쿠아 버그
     .save-elec-bug = 일렉트릭 버그
     .save-wood-bug = 나무 버그
-
 game-exe4 = 록맨 이그제 4
     .short = EXE4
     .variant-0 = 록맨 이그제 4 토너먼트 레드 썬
@@ -115,7 +109,6 @@ game-exe4 = 록맨 이그제 4
     .save-dark-hp-997 = 완전한 악 (997 HP)
     .save-light-hp-999 = 선 (999 HP)
     .save-light-hp-1000 = 선 (1000 HP)
-
 game-bn4 = 록맨 이그제 4 (영어판)
     .short = BN4
     .variant-0 = 록맨 이그제 4 토너먼트 레드 선 (영어판)
@@ -126,14 +119,12 @@ game-bn4 = 록맨 이그제 4 (영어판)
     .match-type-1-1 = 트리플(토너먼트 비주얼)
     .save-dark-hp-997 = 완전한 악 (997 HP)
     .save-light-hp-999 = 선 (999 HP)
-    .save-light-hp-1000 = 선 (1000 HP)
-
+    .save-light-hp-1000 = 선(1000 HP)
 game-exe45 = 록맨 이그제 4.5
     .short = EXE4.5
     .variant-0 = 록맨 이그제 4.5 실제 운영
     .match-type-0-0 = 단일
     .match-type-1-0 = 트리플
-
 game-exe5 = 록맨 이그제 5
     .short = EXE5
     .variant-0 = 록맨 엑제 5 팀 오브 블루스
@@ -144,7 +135,6 @@ game-exe5 = 록맨 이그제 5
     .match-type-1-1 = 트리플(모든 스테이지 구성)
     .save-dark = 완전한 악
     .save-light = 좋은
-
 game-bn5 = 록맨 이그제 5 (영어판)
     .short = BN5
     .variant-0 = 록맨 엑제 5 팀 오브 블루스 (영어판)
@@ -155,11 +145,10 @@ game-bn5 = 록맨 이그제 5 (영어판)
     .match-type-1-1 = 트리플(모든 스테이지 구성)
     .save-dark = 완전한 악
     .save-light = 좋은
-
 game-exe6 = 록맨 이그제 6
     .short = EXE6
-    .variant-0 = 록맨 이그제 6 전뇌수 그레이거
-    .variant-1 = 록맨 이그제 6 전뇌 짐승 파르저
+    .variant-0 = 록맨 이그제 6 전뇌수 그레이가
+    .variant-1 = 록맨 이그제 6 전뇌 짐승 farser
     .match-type-0-0 = 단일
     .match-type-1-0 = 트리플
     .save-megaman = 록맨
@@ -174,7 +163,6 @@ game-exe6 = 록맨 이그제 6
     .save-groundman = 그라운드맨
     .save-dustman = 더스트맨
     .save-protoman = 블루스
-
 game-bn6 = 록맨 이그제 6 (영어판)
     .short = BN6
     .variant-0 = 록맨 이그제 6 전뇌수 그레이가(영어판)

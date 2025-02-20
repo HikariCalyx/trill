@@ -9,18 +9,15 @@ play-no-game = 작품 미선택
 play-no-patch = 패치 미적용
 play-you = 자신
 play-cancel = 취소
-
 play-details-game = 작품
     .unrecognized = 알 수 없음
 play-details-match-type = 일치 유형
 play-details-reveal-setup = 빌드 공개
 play-details-input-delay = 입력 지연
     .suggest = 제안
-
 play-connection-task-starting = 연결 시작 중…
 play-connection-task-signaling = 매치 메이킹 서버에 연결 중 ...
 play-connection-task-waiting = 상대방 연결 대기 중…
-
 select-save = 저장 파일 선택
     .select = 선택
     .no-save-selected = 저장 파일이 선택되지 않았습니다.
