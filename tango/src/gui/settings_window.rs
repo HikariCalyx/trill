@@ -700,9 +700,7 @@ fn show_about_tab(ui: &mut egui::Ui) {
         ui.horizontal_wrapped(|ui| {
             ui.spacing_mut().item_spacing.x = 0.0;
             ui.hyperlink_to("Trill", "https://trill.hikaricalyx.com");
-            ui.label(", along with its parent project ");
-            ui.hyperlink_to("Tango", "https://tango.n1gp.net");
-            ui.label(", would not be a reality without the work of the many people who have helped make this possible.");
+            ui.label(" would not be a reality without the work of the many people who have helped make this possible.");
         });
 
         ui.heading("Development");
@@ -860,17 +858,6 @@ fn show_about_tab(ui: &mut egui::Ui) {
                 ui.label(", ");
 
                 ui.hyperlink_to("dhenva", "https://twitch.tv/dhenva");
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("Korean: ");
-
-                ui.hyperlink_to("Hikari Calyx", "https://twitter.com/Hikari_Calyx");
             });
         });
 

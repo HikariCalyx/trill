@@ -1,9 +1,0 @@
-updater = 업데이트
-updater-downloading = 업데이트 다운로드 중({ $percent }%)…
-updater-update-available = 사용 가능한 업데이트가 있습니다!
-updater-ready-to-update = 업데이트 준비 완료!
-updater-current-version = 현재 버전
-updater-latest-version = 최신 버전
-updater-update-now = 지금 업데이트!
-updater-loading = 업데이트 정보를로드하는 중 ...
-updater-no-info = 이 버전의 정보를 찾을 수 없습니다.
