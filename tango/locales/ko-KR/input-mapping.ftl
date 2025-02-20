@@ -1,4 +1,5 @@
-input-mapping-prompt = "{$key}" 입력을 누릅니다.
+input-mapping-prompt = {$key} 입력을 누릅니다.
+
 input-button-left = ⬅
 input-button-right = ➡
 input-button-up = ⬆
@@ -11,6 +12,7 @@ input-button-start = START
 input-button-select = SELECT
 input-button-speed-change = 속도 변경
 input-button-menu = 메뉴
+
 physical-input-button-dpup = 십자 버튼 ⬆
 physical-input-button-dpdown = 십자 버튼 ⬇
 physical-input-button-dpleft = 십자 버튼 ⬅
@@ -27,6 +29,7 @@ physical-input-button-back = BACK
 physical-input-button-guide = 가이드
 physical-input-button-start = START
 physical-input-button-touchpad = 터치패드
+
 physical-input-axis-motion-leftx-minus = L 스틱 ⬅
 physical-input-axis-motion-leftx-plus = L 스틱 ➡
 physical-input-axis-motion-lefty-minus = L 스틱 ⬆
