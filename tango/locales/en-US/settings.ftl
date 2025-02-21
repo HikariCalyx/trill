@@ -1,4 +1,5 @@
 settings = Settings
+settings-exit = Exit
 
 settings-tab-general = General
 settings-tab-input = Input
@@ -32,6 +33,7 @@ settings-input-delay = Input delay
 settings-ui-scale = UI scale
 settings-max-queue-length = Max queue length
 settings-matchmaking-endpoint = Matchmaking endpoint
+settings-matchmaking-usetango = Use default endpoint from Tango
 settings-replaycollector-endpoint = Replay collector endpoint
 settings-patch-repo = Patches repository
 settings-enable-patch-autoupdate = Enable autoupdate

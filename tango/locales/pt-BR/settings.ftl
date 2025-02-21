@@ -1,4 +1,5 @@
 settings = Configurações
+settings-exit = Fechar
 settings-tab-general = Geral
 settings-tab-input = Teclas
 settings-tab-graphics = Gráficos
@@ -28,6 +29,7 @@ settings-input-delay = Atraso dos botões
 settings-ui-scale = escala IU
 settings-max-queue-length = Tamanho máximo da fila
 settings-matchmaking-endpoint = Endpoint do matchmaking
+settings-matchmaking-usetango = Use o ponto de extremidade padrão do Tango
 settings-replaycollector-endpoint = Endpoint do coletor de gravações
 settings-patch-repo = Repositório de patches
 settings-enable-patch-autoupdate = Ativar atualização automática

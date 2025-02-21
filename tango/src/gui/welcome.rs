@@ -52,17 +52,24 @@ pub fn show(
                     ui.horizontal(|ui| {
                         if has_roms {
                             ui.label(egui::RichText::new("✅").color(egui::Color32::from_rgb(0x4c, 0xaf, 0x50)));
-                        } else {
+                        } else if cfg!(all(target_os = "windows", target_arch = "x86_64")) || cfg!(all(target_os = "linux", target_arch = "x86_64")) || cfg!(target_os = "macos") {
                             ui.label(egui::RichText::new("⌛").color(egui::Color32::from_rgb(0xf4, 0xba, 0x51)));
+                        } else {
+                            ui.label(egui::RichText::new("❌").color(egui::Color32::from_rgb(0xff, 0x0, 0x0)));
                         }
                         ui.strong(i18n::LOCALES.lookup(&config.language, "welcome-step-1").unwrap());
                     });
                     if !has_roms {
+                        if cfg!(all(target_os = "windows", target_arch = "x86_64")) || cfg!(all(target_os = "linux", target_arch = "x86_64")) || cfg!(target_os = "macos") {   
                         ui.label({
                             i18n::LOCALES
                                 .lookup(&config.language, "welcome-step-1-description")
                                 .unwrap()
                         });
+                        } else {
+                            ui.strong(i18n::LOCALES.lookup(&config.language, "welcome-step-1-unsupported-platform").unwrap());
+                            ui.hyperlink_to(i18n::LOCALES.lookup(&config.language, "welcome-step-1-see-here").unwrap(), "https://github.com/HikariCalyx/trill/wiki/How-to-get-game-ROM-images-legally");
+                        }
                     }
 
                     ui.add_space(16.0);

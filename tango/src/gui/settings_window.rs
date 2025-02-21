@@ -1,5 +1,6 @@
 use crate::{config, game, gui, i18n, input, patch, save, version};
 use fluent_templates::Loader;
+use std::process;
 
 #[derive(PartialEq, Eq)]
 enum Tab {
@@ -211,6 +212,13 @@ fn show_general_tab(ui: &mut egui::Ui, config: &mut config::Config, font_familie
                         .suffix("%")
                         .speed(25),
                 );
+                ui.end_row();
+            }
+
+            {
+                if ui.add(egui::Button::new(i18n::LOCALES.lookup(&config.language, "settings-exit").unwrap())).clicked() {
+                    process::exit(0);
+                }
                 ui.end_row();
             }
         });
@@ -534,6 +542,11 @@ fn show_netplay_tab(ui: &mut egui::Ui, config: &mut config::Config) {
                         ""
                     }),
             );
+            ui.end_row();
+
+            if ui.add(egui::Button::new(i18n::LOCALES.lookup(&config.language, "settings-matchmaking-usetango").unwrap())).clicked() {
+                config.matchmaking_endpoint = String::from("wss://matchmaking.tango.n1gp.net");
+            }
             ui.end_row();
 
             {
@@ -994,7 +1007,7 @@ fn show_about_tab(ui: &mut egui::Ui) {
                 ui.spacing_mut().item_spacing.x = 0.0;
                 ui.label("Logo: ");
 
-                ui.hyperlink_to("saladdammit", "https://twitter.com/saladdammit");
+                ui.hyperlink_to("NAKUSAN", "https://space.bilibili.com/303949");
             });
         });
 

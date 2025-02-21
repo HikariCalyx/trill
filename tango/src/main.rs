@@ -168,13 +168,27 @@ fn child_main(mut config: config::Config) -> Result<(), anyhow::Error> {
     let icon_width = icon.width();
     let icon_height = icon.height();
 
+    let icon_small = image::load_from_memory(include_bytes!("icon_16.png"))?;
+    let icon_small_width = icon_small.width();
+    let icon_small_height = icon_small.height();
+
     let window_builder = winit::window::WindowBuilder::new()
         .with_title(i18n::LOCALES.lookup(&config.read().language, "window-title").unwrap())
-        .with_window_icon(Some(winit::window::Icon::from_rgba(
-            icon.into_bytes(),
-            icon_width,
-            icon_height,
-        )?))
+        .with_window_icon(if cfg!(target_os = "windows")
+            {
+                Some(winit::window::Icon::from_rgba(
+                    icon_small.into_bytes(),
+                    icon_small_width,
+                    icon_small_height,
+                )?)
+            } else {
+                Some(winit::window::Icon::from_rgba(
+                    icon.into_bytes(),
+                    icon_width,
+                    icon_height,
+                )?)
+            }
+        )
         .with_inner_size(config.read().window_size)
         .with_min_inner_size(winit::dpi::PhysicalSize::new(
             mgba::gba::SCREEN_WIDTH,

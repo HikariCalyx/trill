@@ -1,4 +1,5 @@
 settings = Instellingen
+settings-exit = Sluit
 settings-tab-general = Algemeen
 settings-tab-input = Invoer
 settings-tab-graphics = Afbeeldingen
@@ -28,6 +29,7 @@ settings-input-delay = Invoervertraging
 settings-ui-scale = Grootte van de Gebruikersinterface
 settings-max-queue-length = Maximale lengte wachtrij
 settings-matchmaking-endpoint = Eindpunt matchmaking
+settings-matchmaking-usetango = Standaard eindpunt van Tango gebruiken
 settings-replaycollector-endpoint = Eindpunt replay verzamelaar
 settings-patch-repo = Patches repository
 settings-enable-patch-autoupdate = Autoupdate inschakelen
