@@ -21,7 +21,7 @@ mkdir -p "tango_linux_workdir/${target_arch}/bin"
 cp tango/src/icon.png tango_linux_workdir/trill.png
 cp linux/AppRun tango_linux_workdir/AppRun
 cp linux/trill.desktop tango_linux_workdir/trill.desktop
-cp "target/${target_arch}-unknown-linux-gnu/release/tango" "tango_linux_workdir/${target_arch}/bin/trill"
+cp "target/${target_arch}-unknown-linux-gnueabihf/release/tango" "tango_linux_workdir/${target_arch}/bin/trill"
 
 # Bundle ffmpeg.
 ffmpeg_version="6.0"
