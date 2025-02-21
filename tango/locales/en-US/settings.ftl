@@ -1,4 +1,5 @@
 settings = Settings
+settings-exit = Exit
 
 settings-tab-general = General
 settings-tab-input = Input

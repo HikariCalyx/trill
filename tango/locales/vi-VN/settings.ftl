@@ -1,4 +1,5 @@
 settings = Cài đặt
+settings-exit = Đóng
 settings-tab-general = Chung
 settings-tab-input = Đầu vào
 settings-tab-graphics = Đồ họa

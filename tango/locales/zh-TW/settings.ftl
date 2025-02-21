@@ -1,4 +1,5 @@
 settings = 設定
+settings-exit = 退出
 settings-tab-general = 通用設置
 settings-tab-input = 輸入
 settings-tab-graphics = 圖形

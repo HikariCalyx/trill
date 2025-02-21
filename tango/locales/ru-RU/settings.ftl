@@ -1,4 +1,5 @@
 settings = Настройки
+settings-exit = Закрыть
 settings-tab-general = Основные
 settings-tab-input = Управление
 settings-tab-graphics = Графика

@@ -1,5 +1,6 @@
 use crate::{config, game, gui, i18n, input, patch, save, version};
 use fluent_templates::Loader;
+use std::process;
 
 #[derive(PartialEq, Eq)]
 enum Tab {
@@ -211,6 +212,13 @@ fn show_general_tab(ui: &mut egui::Ui, config: &mut config::Config, font_familie
                         .suffix("%")
                         .speed(25),
                 );
+                ui.end_row();
+            }
+
+            {
+                if ui.add(egui::Button::new(i18n::LOCALES.lookup(&config.language, "settings-exit").unwrap())).clicked() {
+                    process::exit(0);
+                }
                 ui.end_row();
             }
         });

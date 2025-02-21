@@ -1,4 +1,5 @@
 settings = Instellingen
+settings-exit = Sluit
 settings-tab-general = Algemeen
 settings-tab-input = Invoer
 settings-tab-graphics = Afbeeldingen
