@@ -217,14 +217,14 @@ impl State {
             themes: Themes {
                 light: {
                     let mut visuals = egui::style::Visuals::light();
-                    visuals.selection.bg_fill = egui::Color32::from_rgb(0x4c, 0xaf, 0x50);
+                    visuals.selection.bg_fill = egui::Color32::from_rgb(0xff, 0xf2, 0xa7);
                     visuals.selection.stroke.color = egui::Color32::BLACK;
                     visuals.faint_bg_color = egui::Color32::LIGHT_GRAY;
                     visuals
                 },
                 dark: {
                     let mut visuals = egui::style::Visuals::dark();
-                    visuals.selection.bg_fill = egui::Color32::from_rgb(0x4c, 0xaf, 0x50);
+                    visuals.selection.bg_fill = egui::Color32::from_rgb(0xdc, 0xb2, 0x7a);
                     visuals.selection.stroke.color = egui::Color32::WHITE;
                     visuals.faint_bg_color = egui::Color32::from_gray(14);
                     visuals.extreme_bg_color = egui::Color32::BLACK;
