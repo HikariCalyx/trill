@@ -66,7 +66,7 @@ fn main() -> Result<(), anyhow::Error> {
         .filter(Some("mgba"), log::LevelFilter::Info)
         .init();
 
-    log::info!("welcome to tango {}!", version::current());
+    log::info!("welcome to trill {}!", version::current());
 
     if std::env::var(TANGO_CHILD_ENV_VAR).unwrap_or_default() == "1" {
         return child_main(config);
