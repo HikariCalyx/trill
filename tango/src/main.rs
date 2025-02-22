@@ -16,6 +16,7 @@ mod graphics;
 mod gui;
 mod i18n;
 mod input;
+mod input_nostart;
 mod keyboard;
 mod net;
 mod patch;
@@ -66,7 +67,7 @@ fn main() -> Result<(), anyhow::Error> {
         .filter(Some("mgba"), log::LevelFilter::Info)
         .init();
 
-    log::info!("welcome to tango {}!", version::current());
+    log::info!("welcome to trill {}!", version::current());
 
     if std::env::var(TANGO_CHILD_ENV_VAR).unwrap_or_default() == "1" {
         return child_main(config);
@@ -237,7 +238,16 @@ fn child_main(mut config: config::Config) -> Result<(), anyhow::Error> {
     let fps_counter = std::sync::Arc::new(parking_lot::Mutex::new(stats::Counter::new(30)));
     let emu_tps_counter = std::sync::Arc::new(parking_lot::Mutex::new(stats::Counter::new(10)));
 
-    let mut input_state = input::State::new();
+    if (config.disable_start_in_netbattle) {
+        if (link_code.is_empty()) {
+            let mut input_state = input::State::new();
+        } else {
+            let mut input_state = input_nostart::State::new();
+        }
+    } else {
+        let mut input_state = input::State::new();
+    }
+    
 
     let mut controllers: std::collections::HashMap<u32, sdl2::controller::GameController> =
         std::collections::HashMap::new();
