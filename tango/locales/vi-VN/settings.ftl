@@ -27,6 +27,7 @@ settings-streamer-mode = Chế độ riêng tư
 settings-debug = Hiện thông tin sửa lỗi
 settings-input-delay = Độ trễ đầu vào
 settings-ui-scale = Tỉ lệ UI
+settings-disable-start = Vô hiệu hóa nút START trong NetBattle
 settings-max-queue-length = Thời gian chờ đối thủ tối đa
 settings-matchmaking-endpoint = Điểm cuối tạo trận đấu
 settings-matchmaking-usetango = Sử dụng điểm cuối mặc định từ Tango

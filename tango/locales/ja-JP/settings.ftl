@@ -27,6 +27,7 @@ settings-streamer-mode = 生放送プライバシー モード
 settings-debug = デバッグ情報を表示
 settings-input-delay = 入力遅延
 settings-ui-scale = UIスケール
+settings-disable-start = ネットバトル中にSTARTボタンを無効にする
 settings-max-queue-length = 最大キューの長
 settings-matchmaking-endpoint = マッチメイキング エンドポイント
 settings-matchmaking-usetango = Tangoのデフォルトエンドポイントを使用する

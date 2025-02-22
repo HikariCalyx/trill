@@ -27,6 +27,7 @@ settings-streamer-mode = Режим приватности стримера
 settings-debug = Показать отладочную информацию
 settings-input-delay = Задержка ввода
 settings-ui-scale = Масштаб интерфейса
+settings-disable-start = Отключить кнопку START во время NetBattle
 settings-max-queue-length = Максимальная длина очереди
 settings-matchmaking-endpoint = Точка окончания матча
 settings-matchmaking-usetango = Использовать конечную точку по умолчанию из Танго

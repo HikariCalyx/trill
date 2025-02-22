@@ -28,6 +28,7 @@ settings-streamer-mode = Streamer Privatsphäre-Modus
 settings-debug = Zeige Debug-Informationen
 settings-input-delay = Eingabeverzögerung
 settings-ui-scale = UI-Skalierung
+settings-disable-start = Deaktivieren Sie die START-Schaltfläche während NetBattle
 settings-max-queue-length = Maximale Warteschlangenlänge
 settings-matchmaking-endpoint = Matchmaking-Endpunkt
 settings-matchmaking-usetango = Standard-Matchmaking-Endpunkt von Tango verwenden

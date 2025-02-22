@@ -151,6 +151,16 @@ fn show_general_tab(ui: &mut egui::Ui, config: &mut config::Config, font_familie
             {
                 ui.strong(
                     i18n::LOCALES
+                        .lookup(&config.language, "settings-disable-start")
+                        .unwrap(),
+                );
+                ui.checkbox(&mut config.disable_start_in_netbattle, "")
+                ui.end_row();
+            }
+
+            {
+                ui.strong(
+                    i18n::LOCALES
                         .lookup(&config.language, "settings-streamer-mode")
                         .unwrap(),
                 );

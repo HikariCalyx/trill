@@ -27,6 +27,7 @@ settings-streamer-mode = 直播隱私模式
 settings-debug = 顯示調試信息
 settings-input-delay = 輸入延遲
 settings-ui-scale = UI縮放
+settings-disable-start = 在網路對戰期間停用START按鈕
 settings-max-queue-length = 最大隊列長度
 settings-matchmaking-endpoint = 配對伺服器端點
 settings-matchmaking-usetango = 使用 Tango 的缺省配對伺服器
