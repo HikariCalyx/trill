@@ -175,17 +175,7 @@ impl Mapping {
         } else {
             0
         }) | (if self.start.iter().any(|c| c.is_active(input)) {
-            if (config.disable_start_in_netbattle)
-            {
-                if (link_code.is_empty())
-                {
-                    mgba::input::keys::START
-                } else {
-                    0
-                }
-            } else {
-                mgba::input::keys::START
-            }
+            mgba::input::keys::START
         } else {
             0
         })
