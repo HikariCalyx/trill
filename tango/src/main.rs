@@ -16,7 +16,6 @@ mod graphics;
 mod gui;
 mod i18n;
 mod input;
-mod input_nostart;
 mod keyboard;
 mod net;
 mod patch;
@@ -239,12 +238,6 @@ fn child_main(mut config: config::Config) -> Result<(), anyhow::Error> {
     let emu_tps_counter = std::sync::Arc::new(parking_lot::Mutex::new(stats::Counter::new(10)));
 
     let mut input_state = input::State::new();
-    if config.disable_start_in_netbattle {
-        if !link_code.is_empty() {
-            input_state = input_nostart::State::new();
-        }
-    }
-    
 
     let mut controllers: std::collections::HashMap<u32, sdl2::controller::GameController> =
         std::collections::HashMap::new();

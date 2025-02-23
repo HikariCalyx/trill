@@ -1,6 +1,7 @@
 use crate::controller::{ControllerAxis, ControllerButton};
 use crate::keyboard::Key;
 pub type State = input_helper::State<Key, ControllerButton>;
+use crate::config::load_or_create;
 
 #[derive(Clone, Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 pub enum PhysicalInput {
@@ -138,6 +139,7 @@ impl Default for Mapping {
 
 impl Mapping {
     pub fn to_mgba_keys(&self, input: &State) -> u32 {
+        let config = load_or_create();
         (if self.left.iter().any(|c| c.is_active(input)) {
             mgba::input::keys::LEFT
         } else {
@@ -175,7 +177,9 @@ impl Mapping {
         } else {
             0
         }) | (if self.start.iter().any(|c| c.is_active(input)) {
-            mgba::input::keys::START
+            if config.disable_start_in_netbattle {
+                mgba::input::keys::START
+            }
         } else {
             0
         })
