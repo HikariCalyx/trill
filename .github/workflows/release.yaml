@@ -58,8 +58,8 @@ jobs:
                   GITHUB_TOKEN: ${{ github.token }}
               with:
                   upload_url: ${{ github.event.release.upload_url }}
-                  asset_path: ./dist/tango-x86_64-windows.exe
-                  asset_name: tango-${{ github.ref_name }}-x86_64-windows.exe
+                  asset_path: ./dist/trill-x86_64-windows.exe
+                  asset_name: trill-${{ github.ref_name }}-x86_64-windows.exe
                   asset_content_type: application/octet-stream
 
     release-mac-universal:
@@ -96,8 +96,8 @@ jobs:
                   GITHUB_TOKEN: ${{ github.token }}
               with:
                   upload_url: ${{ github.event.release.upload_url }}
-                  asset_path: ./dist/tango-macos.dmg
-                  asset_name: tango-${{ github.ref_name }}-macos.dmg
+                  asset_path: ./dist/trill-macos.dmg
+                  asset_name: trill-${{ github.ref_name }}-macos.dmg
                   asset_content_type: application/octet-stream
 
     release-linux-x86_64:
@@ -139,6 +139,6 @@ jobs:
                   GITHUB_TOKEN: ${{ github.token }}
               with:
                   upload_url: ${{ github.event.release.upload_url }}
-                  asset_path: ./dist/tango-x86_64-linux.AppImage
-                  asset_name: tango-x86_64-linux.AppImage
+                  asset_path: ./dist/trill-x86_64-linux.AppImage
+                  asset_name: trill-x86_64-linux.AppImage
                   asset_content_type: application/octet-stream
