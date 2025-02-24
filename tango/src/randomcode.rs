@@ -632,7 +632,7 @@ lazy_static! {
                         "kasutamaizu",
                         "kudasai",
                         "kure",
-                        "kurosufushyuujon"
+                        "kurosufushyuujon",
                         "kusa",
                         "makenai",
                         "maketa",
