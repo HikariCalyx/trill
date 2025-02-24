@@ -668,7 +668,7 @@ lazy_static! {
                     ]
                 }
             ),
-            (
+            // (
                 // "zh-CN",
                 // Choices {
                 //     starts: &[
@@ -727,7 +727,7 @@ lazy_static! {
                 //         "wuguandongxi",
                 //     ],
                 // }
-            )
+            // )
         ]);
 }
 
