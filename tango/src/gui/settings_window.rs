@@ -708,11 +708,22 @@ fn show_about_tab(ui: &mut egui::Ui) {
         ui.horizontal_wrapped(|ui| {
             ui.spacing_mut().item_spacing.x = 0.0;
             ui.hyperlink_to("Trill", "https://trill.hikaricalyx.com");
+            ui.label(", as well as it's parent project ");
+            ui.hyperlink_to("Tango", "https://tango.n1gp.net");
             ui.label(" would not be a reality without the work of the many people who have helped make this possible.");
         });
 
         ui.heading("Development");
         ui.vertical(|ui| {
+            ui.horizontal(|ui| {
+                ui.spacing_mut().item_spacing.x = 0.0;
+                ui.label(" • ");
+                ui.horizontal_wrapped(|ui| {
+                    ui.label("Original Tango Project: ");
+                    ui.hyperlink_to("weenie", "https://github.com/bigfarts");
+                });
+            });
+
             ui.horizontal(|ui| {
                 ui.spacing_mut().item_spacing.x = 0.0;
                 ui.label(" • ");

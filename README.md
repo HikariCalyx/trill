@@ -1,8 +1,8 @@
+![Trill_Logo](https://github.com/HikariCalyx/trill/blob/main/tango/src/emblem.png?raw=true)
+
 # Trill
 
-Trill is rollback netplay for Mega Man Battle Network, which is a fork of Tango.
-
-Rebranding is currently in progress.
+Trill is rollback netplay for Mega Man Battle Network, served as continued development from Tango.
 
 ## Why this name?
 
