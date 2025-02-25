@@ -3,7 +3,7 @@ import os
 import semver
 import toml
 
-with open(os.path.join(os.path.dirname(__file__), "..", "tango", "Cargo.toml")) as f:
+with open(os.path.join(os.path.dirname(__file__), "..", "trill", "Cargo.toml")) as f:
     cargo_toml = toml.load(f)
 
 
@@ -15,15 +15,15 @@ version = semver.Version.parse(cargo_toml["package"]["version"])
 		<key>CFBundleDevelopmentRegion</key>
 		<string>en</string>
 		<key>CFBundleExecutable</key>
-		<string>tango</string>
+		<string>trill</string>
 		<key>CFBundleIdentifier</key>
-		<string>net.n1gp.Tango</string>
+		<string>com.hikaricalyx.trill</string>
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundleName</key>
 		<string>Trill</string>
 		<key>CFBundleIconFile</key>
-		<string>Tango.icns</string>
+		<string>Trill.icns</string>
 		<key>CFBundlePackageType</key>
 		<string>APPL</string>
 		<key>CFBundleShortVersionString</key>

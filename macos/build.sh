@@ -32,7 +32,7 @@ rm -rf Trill.iconset
 # Build macOS binaries.
 cargo build --bin tango --target=aarch64-apple-darwin --release
 cargo build --bin tango --target=x86_64-apple-darwin --release
-lipo -create target/{aarch64-apple-darwin,x86_64-apple-darwin}/release/tango -output Trill.app/Contents/MacOS/tango
+lipo -create target/{aarch64-apple-darwin,x86_64-apple-darwin}/release/tango -output Trill.app/Contents/MacOS/trill
 
 ffmpeg_version="6.0"
 
