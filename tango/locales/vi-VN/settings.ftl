@@ -1,5 +1,7 @@
 settings = Cài đặt
 settings-exit = Đóng
+settings-use-osk = Use On-screen Keyboard
+    .tooltip = Enable On-screen Keyboard on devices without physical keyboard.
 settings-tab-general = Chung
 settings-tab-input = Đầu vào
 settings-tab-graphics = Đồ họa

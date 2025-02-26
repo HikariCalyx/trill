@@ -1,5 +1,7 @@
 settings = 设定
 settings-exit = 退出
+settings-use-osk = 使用屏幕键盘
+    .tooltip = 在无法使用实体键盘的设备上使用屏幕键盘。
 settings-tab-general = 通用设置
 settings-tab-input = 输入
 settings-tab-graphics = 图形

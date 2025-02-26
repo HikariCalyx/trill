@@ -1,5 +1,7 @@
 settings = 設定
 settings-exit = 終了
+settings-use-osk = スクリーンキーボードを有効にする
+    .tooltip = 物理キーボードのないデバイスでスクリーンキーボードを有効にします。
 settings-tab-general = 一般設定
 settings-tab-input = 入力
 settings-tab-graphics = グラフィックス

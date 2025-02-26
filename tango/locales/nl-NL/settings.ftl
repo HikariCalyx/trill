@@ -1,5 +1,7 @@
 settings = Instellingen
 settings-exit = Sluit
+settings-use-osk = Use On-screen Keyboard
+    .tooltip = Enable On-screen Keyboard on devices without physical keyboard.
 settings-tab-general = Algemeen
 settings-tab-input = Invoer
 settings-tab-graphics = Afbeeldingen

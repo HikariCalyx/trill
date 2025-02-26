@@ -104,6 +104,7 @@ pub struct Config {
     pub full_screen: bool,
     pub streamer_mode: bool,
     pub show_own_setup: bool,
+    pub use_osk: bool,
     #[serde(deserialize_with = "ok_or_default")]
     pub graphics_backend: GraphicsBackend,
     #[serde(deserialize_with = "ok_or_default")]
@@ -148,6 +149,7 @@ impl Default for Config {
             full_screen: false,
             streamer_mode: false,
             show_own_setup: false,
+            use_osk: false,
             graphics_backend: Default::default(),
             audio_backend: Default::default(),
             volume: 0x100,

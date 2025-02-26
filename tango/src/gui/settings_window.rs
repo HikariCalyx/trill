@@ -165,6 +165,20 @@ fn show_general_tab(ui: &mut egui::Ui, config: &mut config::Config, font_familie
             {
                 ui.strong(
                     i18n::LOCALES
+                        .lookup(&config.language, "settings-use-osk")
+                        .unwrap(),
+                );
+                ui.checkbox(&mut config.use_osk, "").on_hover_text(
+                    i18n::LOCALES
+                        .lookup(&config.language, "settings-use-osk.tooltip")
+                        .unwrap(),
+                );
+                ui.end_row();
+            }
+
+            {
+                ui.strong(
+                    i18n::LOCALES
                         .lookup(&config.language, "settings-show-own-setup")
                         .unwrap(),
                 );

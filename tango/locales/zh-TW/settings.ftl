@@ -1,5 +1,7 @@
 settings = 設定
 settings-exit = 退出
+settings-use-osk = 啟用螢幕小鍵盤
+    .tooltip = 在無法使用實體鍵盤的裝置上啟用螢幕小鍵盤。
 settings-tab-general = 通用設置
 settings-tab-input = 輸入
 settings-tab-graphics = 圖形

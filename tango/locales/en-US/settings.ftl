@@ -1,5 +1,7 @@
 settings = Settings
 settings-exit = Exit
+settings-use-osk = Use On-screen Keyboard
+    .tooltip = Enable On-screen Keyboard on devices without physical keyboard.
 
 settings-tab-general = General
 settings-tab-input = Input
