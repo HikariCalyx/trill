@@ -3,7 +3,6 @@ use fluent_templates::Loader;
 use rand::RngCore;
 use sha3::digest::{ExtendableOutput, Update};
 use subtle::ConstantTimeEq;
-use egui_keyboard::Keyboard;
 
 pub enum Warning {
     Incompatible,
@@ -910,7 +909,6 @@ pub struct State {
     show_link_code: bool,
     connection_task: std::sync::Arc<tokio::sync::Mutex<Option<ConnectionTask>>>,
     save_select_state: gui::save_select_view::State,
-    keyboard: Keyboard,
 }
 
 impl State {
@@ -920,7 +918,6 @@ impl State {
             show_link_code: false,
             connection_task: std::sync::Arc::new(tokio::sync::Mutex::new(None)),
             save_select_state: gui::save_select_view::State::new(selection),
-            keyboard: Keyboard::new(),
         }
     }
 }
@@ -1502,10 +1499,6 @@ fn show_bottom_pane(
                         }
                     }
 
-                    if config.use_osk {
-                        self.keyboard.pump_events(ui);
-                    }
-
                     let input_resp = ui.add_enabled(
                         cancellation_token.is_none() && !error_window_open,
                         egui::TextEdit::singleline(link_code)
@@ -1513,7 +1506,6 @@ fn show_bottom_pane(
                             .hint_text(i18n::LOCALES.lookup(&config.language, "play-link-code").unwrap())
                             .desired_width(f32::INFINITY),
                     );
-                    self.keyboard.show(ui);
                     *link_code = link_code
                         .to_lowercase()
                         .chars()
