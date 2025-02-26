@@ -3,6 +3,7 @@ resolver = "2"
 members = [
     "bps",
     "datachannel-wrapper",
+    "egui_keyboard",
     "hqx",
     "input-helper",
     "mgba",
@@ -16,6 +17,13 @@ members = [
     "tango-signaling",
     "tango-signaling-server",
 ]
+
+[workspace.package]
+version = "0.1.0"
+
+[workspace.dependencies]
+eframe = { version = "0.31", features = ["wgpu", "android-game-activity"] }
+egui = "0.31"
 
 [workspace.lints.clippy]
 new_without_default = "allow"

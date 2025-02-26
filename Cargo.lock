@@ -1984,8 +1984,6 @@ dependencies = [
 [[package]]
 name = "egui_keyboard"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6fe3efa1e00a7f9b8bd4a029a3fee4496c4ef59de7a3225142b4a046039a78cd"
 dependencies = [
  "android_clipboard",
  "arboard 3.4.1",
