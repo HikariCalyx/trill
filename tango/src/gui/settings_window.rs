@@ -172,7 +172,7 @@ fn show_general_tab(ui: &mut egui::Ui, config: &mut config::Config, font_familie
                     i18n::LOCALES
                         .lookup(&config.language, "settings-use-osk.tooltip")
                         .unwrap(),
-                );
+                ).enabled(false);
                 ui.end_row();
             }
 
