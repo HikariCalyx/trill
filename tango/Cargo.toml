@@ -106,7 +106,7 @@ wgpu = { version = "0.20", optional = true, features = ["angle"] }
 winit = { version = "0.29", features = ["serde"] }
 zip = "0.6"
 zstd = "0.11"
-egui_keyboard = "0.1.0"
+egui_keyboard = { path = "../egui_keyboard" }
 
 [target.'cfg(unix)'.dependencies]
 nix = "0.25"
