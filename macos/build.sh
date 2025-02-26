@@ -16,7 +16,7 @@ tools/mako_generate.py "$(dirname "${BASH_SOURCE[0]}")/Info.plist.mako" >Trill.a
 
 # Create icon.
 mkdir Trill.iconset
-sips -z 16 16 tango/src/icon.png --out Trill.iconset/icon_16x16.png
+sips -z 16 16 tango/src/icon_16.png --out Trill.iconset/icon_16x16.png
 sips -z 32 32 tango/src/icon.png --out Trill.iconset/icon_16x16@2x.png
 sips -z 32 32 tango/src/icon.png --out Trill.iconset/icon_32x32.png
 sips -z 64 64 tango/src/icon.png --out Trill.iconset/icon_32x32@2x.png

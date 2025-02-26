@@ -3,7 +3,7 @@ import os
 import semver
 import toml
 
-with open(os.path.join(os.path.dirname(__file__), "..", "trill", "Cargo.toml")) as f:
+with open(os.path.join(os.path.dirname(__file__), "..", "tango", "Cargo.toml")) as f:
     cargo_toml = toml.load(f)
 
 
