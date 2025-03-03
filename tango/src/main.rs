@@ -1,7 +1,7 @@
 #![windows_subsystem = "windows"]
 
 use std::io::Write;
-
+use wake_lock::BlockSleep;
 use clap::Parser;
 
 #[macro_use]
@@ -56,6 +56,7 @@ enum UserEvent {
 
 fn main() -> Result<(), anyhow::Error> {
     std::env::set_var("RUST_BACKTRACE", "1");
+    let sleep_block = BlockSleep::new():unwrap();
 
     let config = config::Config::load_or_create()?;
     config.ensure_dirs()?;
