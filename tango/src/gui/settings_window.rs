@@ -601,7 +601,7 @@ fn show_patches_tab(ui: &mut egui::Ui, config: &mut config::Config) {
             ui.end_row();
 
             if ui.add(egui::Button::new(i18n::LOCALES.lookup(&config.language, "settings-patch-usetango").unwrap())).clicked() {
-                config.matchmaking_endpoint = String::from("https://patches.tango.n1gp.net");
+                config.patch_repo = String::from("https://patches.tango.n1gp.net");
             }
             ui.end_row();
 
