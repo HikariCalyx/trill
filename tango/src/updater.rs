@@ -12,7 +12,7 @@ use tokio::io::AsyncWriteExt;
 
 use crate::{config, version};
 
-const GITHUB_RELEASES_URL: &str = "https://api.github.com/repos/HikariCalyx/trill/releases";
+const GITHUB_RELEASES_URL: &str = "https://api.hikaricalyx.com/Trill/v4/GetLatestUpdate";
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct Release {
