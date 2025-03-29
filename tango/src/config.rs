@@ -294,4 +294,4 @@ impl Config {
 }
 
 pub const DEFAULT_MATCHMAKING_ENDPOINT: &str = "ws://matchmaking.trill.hikaricalyx.com";
-pub const DEFAULT_PATCH_REPO: &str = "https://patches.tango.n1gp.net";
+pub const DEFAULT_PATCH_REPO: &str = "https://patches.trill.hikaricalyx.com";

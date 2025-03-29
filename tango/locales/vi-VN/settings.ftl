@@ -32,6 +32,7 @@ settings-matchmaking-endpoint = Điểm cuối tạo trận đấu
 settings-matchmaking-usetango = Sử dụng điểm cuối mặc định từ Tango
 settings-replaycollector-endpoint = Điểm cuối thu thập replay
 settings-patch-repo = Kho lưu trữ bản vá
+settings-patch-usetango = Sử dụng kho bản vá mặc định từ Tango
 settings-enable-patch-autoupdate = Bật tự động cập nhật
 settings-data-path = Đường dẫn dữ liệu
     .open = Mở

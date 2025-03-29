@@ -32,6 +32,7 @@ settings-matchmaking-endpoint = Точка окончания матча
 settings-matchmaking-usetango = Использовать конечную точку по умолчанию из Танго
 settings-replaycollector-endpoint = Конечная точка коллектора Риплеев
 settings-patch-repo = Репозитория Патчей
+settings-patch-usetango = Использовать репозиторий патчей по умолчанию из Tango
 settings-enable-patch-autoupdate = Включить авто обновление
 settings-data-path = Путь к данным
     .open = Открыть

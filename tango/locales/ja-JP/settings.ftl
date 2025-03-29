@@ -32,6 +32,7 @@ settings-matchmaking-endpoint = マッチメイキング エンドポイント
 settings-matchmaking-usetango = Tangoのデフォルトエンドポイントを使用する
 settings-replaycollector-endpoint = リプレイコレクターエンドポイント
 settings-patch-repo = パッチリポジトリ
+settings-patch-usetango = Tangoのデフォルトのパッチリポジトリを使用する
 settings-enable-patch-autoupdate = 自動更新
 settings-data-path = データ経路
     .open = 開く

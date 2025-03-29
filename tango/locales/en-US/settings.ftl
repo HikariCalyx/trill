@@ -36,6 +36,7 @@ settings-matchmaking-endpoint = Matchmaking endpoint
 settings-matchmaking-usetango = Use default endpoint from Tango
 settings-replaycollector-endpoint = Replay collector endpoint
 settings-patch-repo = Patches repository
+settings-patch-usetango = Use default patch repository from Tango
 settings-enable-patch-autoupdate = Enable autoupdate
 settings-data-path = Data path
     .open = Open
