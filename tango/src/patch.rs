@@ -57,7 +57,7 @@ pub async fn update(url: &String, root: &std::path::Path) -> Result<(), anyhow::
             Ok::<_, anyhow::Error>(
                 client
                     .get(format!("{}/index.json", url))
-                    .header("User-Agent", "tango")
+                    .header("User-Agent", "Trill/4.2.0")
                     .send()
                     .await?
                     .json::<tango_filesync::Entries>()
@@ -89,7 +89,7 @@ pub async fn update(url: &String, root: &std::path::Path) -> Result<(), anyhow::
                                 url,
                                 path.components().map(|v| v.as_os_str().to_string_lossy()).join("/")
                             ))
-                            .header("User-Agent", "tango")
+                            .header("User-Agent", "Trill/4.2.0")
                             .send(),
                     )
                     .await?
@@ -247,7 +247,7 @@ pub fn scan(
                         supported_games.insert(game);
                     }
                     FileType::SaveTemplate(name) => {
-                        let save = match std::fs::read(entry.path())
+                        let save = match std::fs::read(&entry.path())
                             .map_err(|e| e.into())
                             .and_then(|raw| game.parse_save(&raw))
                         {

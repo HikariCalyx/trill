@@ -1,5 +1,5 @@
 copy-to-clipboard = Kopieer naar klembord
     .copied = Gekopieerd!
-window-title = Tango
-    .running = Tango (actief)
+window-title = Trill
+    .running = Trill (actief)
 cancel = Cancel

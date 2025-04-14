@@ -1,10 +1,12 @@
-welcome-heading = 歡迎使用Tango！
+welcome-heading = 歡迎使用Trill！
 welcome-description = 在你開始遊戲之前，你只需要完成幾個步驟。
 welcome-step-1 = 檢測ROCKMAN EXE合集
 welcome-step-1-description = 你必須在Steam上安裝ROCKMAN EXE合集。
-welcome-step-1-roms = Add your ROMs
-welcome-step-1-description-roms = Add your ROMs extracted from Mega Man Battle Network Legacy Collection to the ROMs folder.
+welcome-step-1-unsupported-platform = 此平台可能不支援從Steam下載安裝遊戲。
+welcome-step-1-see-here = 了解如何合法取得遊戲 ROM 映像
+welcome-step-1-roms = 追加ROM
+welcome-step-1-description-roms = 你也可以將遊戲ROM放置在指定資料夾下。
 welcome-step-3 = 設置你的暱稱
 welcome-step-3-description = 你可以隨時改變你的暱稱。
-welcome-open-folder = 打開文件夾
+welcome-open-folder = 打開資料夾
 welcome-continue = 已完成！

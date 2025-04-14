@@ -18,10 +18,10 @@ cargo build --bin tango --target="${target_arch}-unknown-linux-gnu" --no-default
 
 # Assemble AppImage stuff.
 mkdir -p "tango_linux_workdir/${target_arch}/bin"
-cp tango/src/icon.png tango_linux_workdir/tango.png
+cp tango/src/icon.png tango_linux_workdir/trill.png
 cp linux/AppRun tango_linux_workdir/AppRun
-cp linux/tango.desktop tango_linux_workdir/tango.desktop
-cp "target/${target_arch}-unknown-linux-gnu/release/tango" "tango_linux_workdir/${target_arch}/bin/tango"
+cp linux/trill.desktop tango_linux_workdir/trill.desktop
+cp "target/${target_arch}-unknown-linux-gnu/release/tango" "tango_linux_workdir/${target_arch}/bin/trill"
 
 # Bundle ffmpeg.
 ffmpeg_version="6.0"
@@ -31,5 +31,5 @@ chmod a+x "tango_linux_workdir/${target_arch}/bin/ffmpeg"
 
 # Build AppImage.
 mkdir -p dist
-./appimagetool-aarch64.AppImage tango_linux_workdir "dist/tango-${target_arch}-linux.AppImage"
+./appimagetool-aarch64.AppImage tango_linux_workdir "dist/trill-${target_arch}-linux.AppImage"
 rm -rf tango_linux_workdir

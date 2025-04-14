@@ -3,7 +3,7 @@ copy-to-clipboard = Copy to clipboard
     .named-as-text = Copy { $name } As Text
     .copied = Copied!
 
-window-title = Tango
-    .running = Tango (running)
+window-title = Trill
+    .running = Trill (running)
 
 cancel = Cancel

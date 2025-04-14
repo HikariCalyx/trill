@@ -1,9 +1,11 @@
-welcome-heading = Добро пожаловать в Танго!
+welcome-heading = Добро пожаловать в Трель!
 welcome-description = Есть всего несколько шагов, которые вам нужно завершить, прежде чем вы сможете начать играть.
 welcome-step-1 = Detect Mega Man Battle Network Legacy Collection
-welcome-step-1-description = You must have Mega Man Battle Network Legacy Collection installed on Steam.
-welcome-step-1-roms = Add your ROMs
-welcome-step-1-description-roms = Add your ROMs extracted from Mega Man Battle Network Legacy Collection to the ROMs folder.
+welcome-step-1-description = У вас должна быть установлена ​​коллекция Mega Man Battle Network Legacy в Steam.
+welcome-step-1-unsupported-platform = Эта платформа может не поддерживать загрузку и установку игр из Steam.
+welcome-step-1-see-here = Как легально получить образы игровых ROM-файлов
+welcome-step-1-roms = Добавьте свои ROMs
+welcome-step-1-description-roms = Добавьте ваши ROM-файлы, извлеченные из Mega Man Battle Network Legacy Collection, в папку ROMs.
 welcome-step-3 = Задайте свой Ник
 welcome-step-3-description = Вы можете изменить это в любое время.
 welcome-open-folder = Открыть папку

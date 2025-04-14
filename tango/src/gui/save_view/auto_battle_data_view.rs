@@ -388,7 +388,7 @@ pub fn show(
     ui.style_mut().visuals.clip_rect_margin = 0.0;
 
     egui::ScrollArea::vertical()
-        .id_salt("auto-battle-data-view")
+        .id_source("auto-battle-data-view")
         .auto_shrink([false, false])
         .show(ui, |ui| {
             show_auto_battle_data(

@@ -1,4 +1,5 @@
 settings = Opciones
+settings-exit = Salir
 settings-tab-general = General
 settings-tab-input = Entrada
 settings-tab-graphics = Gráficos
@@ -28,8 +29,10 @@ settings-input-delay = Retraso
 settings-ui-scale = Escala de UI
 settings-max-queue-length = Máximo largo de la cola
 settings-matchmaking-endpoint = Salida de emparejamiento
+settings-matchmaking-usetango = Utilice el punto final predeterminado de Tango
 settings-replaycollector-endpoint = Salida para el recolector de repeticiones
 settings-patch-repo = Repositorio de parches
+settings-patch-usetango = Usar el repositorio de parches predeterminado de Tango
 settings-enable-patch-autoupdate = Auto actualización
 settings-data-path = Ruta de datos
     .open = Abrir

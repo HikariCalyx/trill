@@ -171,24 +171,24 @@ impl Default for Config {
 }
 
 fn get_project_dirs() -> Option<directories_next::ProjectDirs> {
-    directories_next::ProjectDirs::from("net.n1gp", "", "Tango")
+    directories_next::ProjectDirs::from("com.hikaricalyx", "", "Trill")
 }
 
 fn get_config_path() -> Result<std::path::PathBuf, anyhow::Error> {
     Ok(get_project_dirs()
-        .ok_or_else(|| anyhow::anyhow!("could not get tango project directory"))?
+        .ok_or_else(|| anyhow::anyhow!("could not get trill project directory"))?
         .config_dir()
         .join("config.json"))
 }
 
 pub fn get_updater_path() -> Result<std::path::PathBuf, anyhow::Error> {
     Ok(get_project_dirs()
-        .ok_or_else(|| anyhow::anyhow!("could not get tango project directory"))?
+        .ok_or_else(|| anyhow::anyhow!("could not get trill project directory"))?
         .cache_dir()
         .join("updater"))
 }
 
-const DATA_DIR_NAME: &str = "Tango";
+const DATA_DIR_NAME: &str = "Trill";
 
 impl Config {
     pub fn system_defaults() -> Result<Self, anyhow::Error> {
@@ -197,7 +197,7 @@ impl Config {
 
         let tango_data_dir = user_dirs
             .document_dir()
-            .ok_or_else(|| anyhow::anyhow!("could not get tango data directory"))?
+            .ok_or_else(|| anyhow::anyhow!("could not get trill data directory"))?
             .join(DATA_DIR_NAME);
 
         let sys_language: unic_langid::LanguageIdentifier = sys_locale::get_locale()
@@ -293,5 +293,5 @@ impl Config {
     }
 }
 
-pub const DEFAULT_MATCHMAKING_ENDPOINT: &str = "wss://matchmaking.tango.n1gp.net";
-pub const DEFAULT_PATCH_REPO: &str = "https://patches.tango.n1gp.net";
+pub const DEFAULT_MATCHMAKING_ENDPOINT: &str = "ws://matchmaking.trill.hikaricalyx.com";
+pub const DEFAULT_PATCH_REPO: &str = "https://patches.trill.hikaricalyx.com";

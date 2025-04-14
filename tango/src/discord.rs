@@ -4,7 +4,7 @@ use fluent_templates::Loader;
 
 use crate::{game, i18n};
 
-const APP_ID: u64 = 974089681333534750;
+const APP_ID: u64 = 1341723708565225502;
 
 pub struct GameInfo {
     pub title: String,
@@ -29,7 +29,7 @@ pub fn make_base_activity(game_info: Option<GameInfo>) -> rpc::activity::Activit
         details: game_info.as_ref().map(|gi| gi.title.clone()),
         assets: Some(rpc::activity::Assets {
             small_image: Some("logo".to_string()),
-            small_text: Some("Tango".to_string()),
+            small_text: Some("Trill".to_string()),
             large_image: game_info.as_ref().map(|gi| gi.family.clone()),
             large_text: game_info.as_ref().map(|gi| gi.title.clone()),
         }),

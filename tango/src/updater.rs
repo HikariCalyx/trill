@@ -12,7 +12,7 @@ use tokio::io::AsyncWriteExt;
 
 use crate::{config, version};
 
-const GITHUB_RELEASES_URL: &str = "https://api.github.com/repos/tangobattle/tango/releases";
+const GITHUB_RELEASES_URL: &str = "https://api.hikaricalyx.com/Trill/v4/GetLatestUpdate";
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct Release {
@@ -56,12 +56,12 @@ fn is_target_installer(s: &str) -> bool {
         s.ends_with("-macos.dmg")
     } else if cfg!(all(target_os = "windows", target_arch = "x86_64")) {
         s.ends_with("-x86_64-windows.exe")
+    } else if cfg!(all(target_os = "windows", target_arch = "x86")) {
+        s.ends_with("-i686-windows.exe")
     } else if cfg!(all(target_os = "linux", target_arch = "x86_64")) {
         s.ends_with("-x86_64-linux.AppImage")
     } else if cfg!(all(target_os = "linux", target_arch = "aarch64")) {
         s.ends_with("-aarch64-linux.AppImage")
-    } else if cfg!(all(target_os = "linux", target_arch = "x86")) {
-        s.ends_with("-i686-linux.AppImage")
     } else if cfg!(all(target_os = "linux", target_arch = "arm")) {
         s.ends_with("-armv7-linux.AppImage")
     } else {
@@ -264,7 +264,7 @@ impl Updater {
                                 Ok::<_, anyhow::Error>(
                                     client
                                         .get(GITHUB_RELEASES_URL)
-                                        .header("User-Agent", "tango")
+                                        .header("User-Agent", "Trill/1.0")
                                         .send()
                                         .await?
                                         .json::<Vec<GithubReleaseInfo>>()

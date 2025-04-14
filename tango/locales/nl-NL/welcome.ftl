@@ -1,7 +1,9 @@
-welcome-heading = Welkom bij Tango!
+welcome-heading = Welkom bij Trill!
 welcome-description = Er zijn slechts een paar stappen die je moet voltooien voordat je van dolle speelpret kunt genieten.
 welcome-step-1 = Detecteer Mega Man Battle Network Legacy Collection
 welcome-step-1-description = Je moet Mega Man Battle Network Legacy Collection geïnstalleerd hebben op Steam.
+welcome-step-1-unsupported-platform = Dit platform ondersteunt mogelijk niet het downloaden en installeren van games via Steam.
+welcome-step-1-see-here = Hoe je legaal game-ROM-images kunt verkrijgen
 welcome-step-1-roms = Add your ROMs
 welcome-step-1-description-roms = Add your ROMs extracted from Mega Man Battle Network Legacy Collection to the ROMs folder.
 welcome-step-3 = Stel uw gebruikersnaam in

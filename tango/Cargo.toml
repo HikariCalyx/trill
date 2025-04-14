@@ -1,6 +1,6 @@
 [package]
 name = "tango"
-version = "4.1.6-dev3"
+version = "4.2.1"
 edition = "2021"
 license = "AGPL-3.0-or-later"
 default-run = "tango"
@@ -42,6 +42,7 @@ env_logger = "0.9"
 fluent-bundle = "0.15"
 fluent-langneg = "0.13"
 fluent-templates = "0.8"
+fontdue = { version = "0.8", features = ["simd", "parallel"] }
 futures = "0.3"
 futures-util = "0.3"
 glow = "0.16"
@@ -67,6 +68,7 @@ pollster = "0.3"
 prost = "0.10"
 rand = "0.8"
 rand_pcg = { version = "0.3", features = ["serde1"] }
+raw-window-handle = "0.5"
 regex = "1.6"
 reqwest = { version = "0.11", features = ["stream", "json"] }
 reservoir-sampling = "0.5"

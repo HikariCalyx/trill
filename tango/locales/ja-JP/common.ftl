@@ -1,5 +1,5 @@
 copy-to-clipboard = クリップボードへコピー
     .copied = コピーしました！
-window-title = Tango
-    .running = Tango（実行中）
+window-title = トリル
+    .running = トリル（実行中）
 cancel = Cancel

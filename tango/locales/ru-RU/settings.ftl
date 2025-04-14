@@ -1,4 +1,5 @@
 settings = Настройки
+settings-exit = Закрыть
 settings-tab-general = Основные
 settings-tab-input = Управление
 settings-tab-graphics = Графика
@@ -28,8 +29,10 @@ settings-input-delay = Задержка ввода
 settings-ui-scale = Масштаб интерфейса
 settings-max-queue-length = Максимальная длина очереди
 settings-matchmaking-endpoint = Точка окончания матча
+settings-matchmaking-usetango = Использовать конечную точку по умолчанию из Танго
 settings-replaycollector-endpoint = Конечная точка коллектора Риплеев
 settings-patch-repo = Репозитория Патчей
+settings-patch-usetango = Использовать репозиторий патчей по умолчанию из Tango
 settings-enable-patch-autoupdate = Включить авто обновление
 settings-data-path = Путь к данным
     .open = Открыть

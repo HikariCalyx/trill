@@ -1,4 +1,5 @@
 settings = 设定
+settings-exit = 退出
 settings-tab-general = 通用设置
 settings-tab-input = 输入
 settings-tab-graphics = 图形
@@ -28,8 +29,10 @@ settings-input-delay = 输入延迟
 settings-ui-scale = UI缩放
 settings-max-queue-length = 最大队列长度
 settings-matchmaking-endpoint = 配对服务器端点
+settings-matchmaking-usetango = 使用 Tango 的默认配对服务器
 settings-replaycollector-endpoint = 回放收集器端点
 settings-patch-repo = 补丁仓库
+settings-patch-usetango = 使用 Tango 的默认补丁仓库
 settings-enable-patch-autoupdate = 自动更新
 settings-data-path = 数据路径
     .open = 打开

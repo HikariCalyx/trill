@@ -23,29 +23,30 @@ convert Tango.iconset/*.png tango/icon.ico
 rm -rf Tango.iconset
 
 # Build Windows binaries.
-cargo build --bin tango --release --target x86_64-pc-windows-gnu
+cargo build --bin tango --release --target i686-pc-windows-gnu
 
 # Build installer.
 mkdir tango_win_workdir
-tools/mako_generate.py "$(dirname "${BASH_SOURCE[0]}")/installer.nsi.mako" >tango_win_workdir/installer.nsi
+tools/mako_generate.py "$(dirname "${BASH_SOURCE[0]}")/installer_i686.nsi.mako" >tango_win_workdir/installer.nsi
 
 pushd tango_win_workdir
 
 cp ../tango/icon.ico .
-cp ../target/x86_64-pc-windows-gnu/release/tango.exe ./trill.exe
-cp {/usr/x86_64-w64-mingw32/lib/libwinpthread-1.dll,/usr/lib/gcc/x86_64-w64-mingw32/10-posix/{libgcc_s_seh-1.dll,libstdc++-6.dll}} .
+cp ../target/i686-pc-windows-gnu/release/tango.exe ./trill.exe
+cp {/usr/i686-w64-mingw32/lib/libwinpthread-1.dll,/usr/lib/gcc/i686-w64-mingw32/10-posix/{libgcc_s_dw2-1.dll,libstdc++-6.dll}} .
 
-angle_zip_url="https://github.com/google/gfbuild-angle/releases/download/github%2Fgoogle%2Fgfbuild-angle%2Ff810e998993290f049bbdad4fae975e4867100ad/gfbuild-angle-f810e998993290f049bbdad4fae975e4867100ad-Windows_x64_Release.zip"
-mkdir angle
-wget -O - "${angle_zip_url}" | bsdtar -Cangle -xvf- lib/{libEGL.dll,libGLESv2.dll}
-cp angle/lib/{libEGL.dll,libGLESv2.dll} .
+# Chrome 109.0.5414.120 installer is used here, since it's the last version that supports Windows 7 and 8
+chrome_109_url="https://dl.google.com/release2/chrome/acihtkcueyye3ymoj2afvv7ulzxa_109.0.5414.120/109.0.5414.120_chrome_installer.exe"
+wget "${chrome_109_url}"
+7z x 109.0.5414.120_chrome_installer.exe
+7z e -aoa chrome.7z {Chrome-bin/109.0.5414.120/libEGL.dll,Chrome-bin/109.0.5414.120/libGLESv2.dll}
 
 ffmpeg_version="6.0"
-wget -O ffmpeg.exe "https://github.com/eugeneware/ffmpeg-static/releases/download/b${ffmpeg_version}/ffmpeg-win32-x64"
+wget -O ffmpeg.exe "https://github.com/eugeneware/ffmpeg-static/releases/download/b${ffmpeg_version}/ffmpeg-win32-ia32"
 
 makensis installer.nsi
 popd
 
 mkdir -p dist
-mv tango_win_workdir/installer.exe "dist/trill-x86_64-windows.exe"
+mv tango_win_workdir/installer.exe "dist/trill-i686-windows.exe"
 rm -rf tango_win_workdir
