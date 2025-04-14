@@ -1,9 +1,10 @@
-crash = Oops, Trill has encountered an error and has crashed!
+crash = 
+    죄송합니다, 트릴이 오류가 발생하여 충돌이 발생했습니다.
 
-    When reporting this crash, please include the following log file:
+    이 충돌을 보고할 때 다음 로그 파일을 첨부하십시오.
 
     {$path}
-
-crash-no-log = Oops, Trill has encountered an error and has crashed!
+crash-no-log = 
+    죄송합니다, 트릴이 오류가 발생하여 충돌이 발생했습니다.
 
     {$error}

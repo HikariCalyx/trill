@@ -1,16 +1,12 @@
-welcome-heading = Welcome to Trill!
-welcome-description = There's just a few steps you'll need to complete before you can start playing.
-
-welcome-step-1 = Detect Mega Man Battle Network Legacy Collection
-welcome-step-1-description = You must have Mega Man Battle Network Legacy Collection installed on Steam.
-welcome-step-1-unsupported-platform = This platform may not support downloading and installing games from Steam.
-welcome-step-1-see-here = Learn how to get game ROM images legally
-
-welcome-step-1-roms = Add your ROMs
-welcome-step-1-description-roms = Add your ROMs extracted from Mega Man Battle Network Legacy Collection to the ROMs folder.
-
-welcome-step-3 = Set your nickname
-welcome-step-3-description = You can change this at any time.
-
-welcome-open-folder = Open folder
-welcome-continue = I'm done!
+welcome-heading = 트릴에 오신 것을 환영합니다!
+welcome-description = 대전하기 전에 트릴의 초기 설정을 안내합니다.
+welcome-step-1 = "록맨 에그제 어드밴스드 컬렉션"검색
+welcome-step-1-description = 록맨 에그제 어드밴스드 컬렉션을 Steam에 설치해야합니다.
+welcome-step-1-unsupported-platform = 이 플랫폼은 Steam에서 게임 다운로드 및 설치를 지원하지 않을 수 있습니다.
+welcome-step-1-see-here = 게임 ROM 이미지를 합법적으로 얻는 방법
+welcome-step-1-roms = 빠져 나온 ROM 추가
+welcome-step-1-description-roms = 또는 게임 ROM 이미지를 다음 폴더에 넣을 수 있습니다.
+welcome-step-3 = 닉네임 설정
+welcome-step-3-description = 닉네임은 언제든지 변경할 수 있습니다.
+welcome-open-folder = 폴더 열기
+welcome-continue = 완료!
