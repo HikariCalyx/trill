@@ -11,6 +11,10 @@ pub fn show(ui: &mut egui::Ui, font_families: &gui::FontFamilies, language: &mut
             egui::RichText::new("日本語").family(font_families.jpan.egui.clone()),
         ),
         (
+            unic_langid::langid!("ko-KR"),
+            egui::RichText::new("한국어").family(font_families.kore.egui.clone()),
+        ),
+        (
             unic_langid::langid!("zh-CN"),
             egui::RichText::new("简体中文").family(font_families.hans.egui.clone()),
         ),
