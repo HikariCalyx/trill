@@ -12,5 +12,5 @@ auto-battle-data-giga-chip = 기가칩
 auto-battle-data-combos = 콤보
 auto-battle-data-program-advance = 프로그램 어드밴스
 auto-battle-data-unset = 설정되지 않음
-copy-navicust-image-to-clipboard = 네비카스 이미지를 클립보드에 복사
+copy-navicust-image-to-clipboard = 내비 커스터마이저 이미지를 클립보드에 복사
     .copied = 복사했습니다!

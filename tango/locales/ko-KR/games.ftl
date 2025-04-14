@@ -1,6 +1,6 @@
 game-exe1 = 록맨 에그제 (일본판)
     .short = EXE1
-    .variant-0 = 록맨 에그제 
+    .variant-0 = 록맨 에그제 (일본판)
     .match-type-0-0 = 단일
 game-bn1 = 록맨 에그제 (영어판)
     .short = BN1
@@ -122,7 +122,7 @@ game-bn4 = 록맨 에그제 4 (영어판)
     .save-light-hp-1000 = 선 (1000 HP)
 game-exe45 = 록맨 에그제 4.5 (일본판)
     .short = EXE4.5
-    .variant-0 = 록맨 에그제  4.5 실제 운영
+    .variant-0 = 록맨 에그제 4.5 실제 운영 (일본판)
     .match-type-0-0 = 단일
     .match-type-1-0 = 트리플
 game-exe5 = 록맨 에그제 5 (일본판)
