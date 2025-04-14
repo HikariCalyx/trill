@@ -1,0 +1,16 @@
+save-tab-cover = 커버
+save-tab-navi = 내비게이션
+save-tab-folder = 칩 폴더
+save-tab-patch-cards = 개조 카드
+save-tab-auto-battle-data = ABD
+save-cover-description = 이 탭은 의도적으로 비워 둡니다.
+save-group = 칩 그룹화
+auto-battle-data-secondary-standard-chips = 표준 칩(2차)
+auto-battle-data-standard-chips = 표준 칩
+auto-battle-data-mega-chips = 메가칩
+auto-battle-data-giga-chip = 기가칩
+auto-battle-data-combos = 콤보
+auto-battle-data-program-advance = 프로그램 어드밴스
+auto-battle-data-unset = 설정되지 않음
+copy-navicust-image-to-clipboard = 내비 커스터마이저 이미지를 클립보드에 복사
+    .copied = 복사했습니다!

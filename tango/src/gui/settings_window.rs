@@ -890,6 +890,21 @@ fn show_about_tab(ui: &mut egui::Ui) {
             ui.label(" • ");
             ui.horizontal_wrapped(|ui| {
                 ui.spacing_mut().item_spacing.x = 0.0;
+                ui.label("Korean (South Korea): ");
+
+                ui.hyperlink_to("Hikari Calyx", "https://twitter.com/Hikari_Calyx");
+
+                ui.label(", ");
+
+                ui.hyperlink_to("namu.wiki Contributors", "https://namu.wiki/w/%EB%A1%9D%EB%A7%A8%20%EC%97%90%EA%B7%B8%EC%A0%9C%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%EC%BB%AC%EB%A0%89%EC%85%98");
+            });
+        });
+
+        ui.horizontal(|ui| {
+            ui.spacing_mut().item_spacing.x = 0.0;
+            ui.label(" • ");
+            ui.horizontal_wrapped(|ui| {
+                ui.spacing_mut().item_spacing.x = 0.0;
                 ui.label("Mandarin (mainland China): ");
 
                 ui.hyperlink_to("weenie", "https://github.com/bigfarts");
