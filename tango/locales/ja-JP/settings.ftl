@@ -30,6 +30,7 @@ settings-ui-scale = UIスケール
 settings-max-queue-length = 最大キューの長
 settings-matchmaking-endpoint = マッチメイキング エンドポイント
 settings-matchmaking-usetango = Tangoのデフォルトエンドポイントを使用する
+settings-matchmaking-usecnserver = トリルの中国サーバーを使用する（地域ロックあり）
 settings-replaycollector-endpoint = リプレイコレクターエンドポイント
 settings-patch-repo = パッチリポジトリ
 settings-patch-usetango = Tangoのデフォルトのパッチリポジトリを使用する

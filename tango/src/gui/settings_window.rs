@@ -547,6 +547,9 @@ fn show_netplay_tab(ui: &mut egui::Ui, config: &mut config::Config) {
             if ui.add(egui::Button::new(i18n::LOCALES.lookup(&config.language, "settings-matchmaking-usetango").unwrap())).clicked() {
                 config.matchmaking_endpoint = String::from("wss://matchmaking.tango.n1gp.net");
             }
+            if ui.add(egui::Button::new(i18n::LOCALES.lookup(&config.language, "settings-matchmaking-usecnserver").unwrap())).clicked() {
+                config.matchmaking_endpoint = String::from("ws://121.4.51.193:1984");
+            }
             ui.end_row();
 
             {

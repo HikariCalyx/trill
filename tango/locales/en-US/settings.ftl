@@ -34,6 +34,7 @@ settings-ui-scale = UI scale
 settings-max-queue-length = Max queue length
 settings-matchmaking-endpoint = Matchmaking endpoint
 settings-matchmaking-usetango = Use default endpoint from Tango
+settings-matchmaking-usecnserver = Use Trill's Chinese server (Region Locked)
 settings-replaycollector-endpoint = Replay collector endpoint
 settings-patch-repo = Patches repository
 settings-patch-usetango = Use default patch repository from Tango

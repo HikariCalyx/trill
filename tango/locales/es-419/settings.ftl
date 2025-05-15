@@ -30,6 +30,7 @@ settings-ui-scale = Escala de UI
 settings-max-queue-length = Máximo largo de la cola
 settings-matchmaking-endpoint = Salida de emparejamiento
 settings-matchmaking-usetango = Utilice el punto final predeterminado de Tango
+settings-matchmaking-usecnserver = Utilice el servidor chino de Trill (región bloqueada)
 settings-replaycollector-endpoint = Salida para el recolector de repeticiones
 settings-patch-repo = Repositorio de parches
 settings-patch-usetango = Usar el repositorio de parches predeterminado de Tango

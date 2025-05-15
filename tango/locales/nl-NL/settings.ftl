@@ -30,6 +30,7 @@ settings-ui-scale = Grootte van de Gebruikersinterface
 settings-max-queue-length = Maximale lengte wachtrij
 settings-matchmaking-endpoint = Eindpunt matchmaking
 settings-matchmaking-usetango = Standaard eindpunt van Tango gebruiken
+settings-matchmaking-usecnserver = Gebruik Trill's Chinese server (regio vergrendeld)
 settings-replaycollector-endpoint = Eindpunt replay verzamelaar
 settings-patch-repo = Patches repository
 settings-patch-usetango = Gebruik standaard patch repository van Tango

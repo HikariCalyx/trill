@@ -31,6 +31,7 @@ settings-ui-scale = UI-Skalierung
 settings-max-queue-length = Maximale Warteschlangenlänge
 settings-matchmaking-endpoint = Matchmaking-Endpunkt
 settings-matchmaking-usetango = Standard-Matchmaking-Endpunkt von Tango verwenden
+settings-matchmaking-usecnserver = Verwenden Sie den chinesischen Server von Trill (Region gesperrt)
 settings-replaycollector-endpoint = Aufzeichnungskollektor-Endpunkt
 settings-patch-repo = Patch-Repository
 settings-patch-usetango = Standard-Patch-Repository von Tango verwenden

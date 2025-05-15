@@ -30,6 +30,7 @@ settings-ui-scale = UI缩放
 settings-max-queue-length = 最大队列长度
 settings-matchmaking-endpoint = 配对服务器端点
 settings-matchmaking-usetango = 使用 Tango 的默认配对服务器
+settings-matchmaking-usecnserver = 使用 Trill 国服
 settings-replaycollector-endpoint = 回放收集器端点
 settings-patch-repo = 补丁仓库
 settings-patch-usetango = 使用 Tango 的默认补丁仓库

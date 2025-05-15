@@ -30,6 +30,7 @@ settings-ui-scale = Tỉ lệ UI
 settings-max-queue-length = Thời gian chờ đối thủ tối đa
 settings-matchmaking-endpoint = Điểm cuối tạo trận đấu
 settings-matchmaking-usetango = Sử dụng điểm cuối mặc định từ Tango
+settings-matchmaking-usecnserver = Sử dụng máy chủ Trung Quốc của Trill (Khu vực bị khóa)
 settings-replaycollector-endpoint = Điểm cuối thu thập replay
 settings-patch-repo = Kho lưu trữ bản vá
 settings-patch-usetango = Sử dụng kho bản vá mặc định từ Tango

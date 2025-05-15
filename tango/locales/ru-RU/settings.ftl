@@ -33,6 +33,7 @@ settings-matchmaking-usetango = Использовать конечную точ
 settings-replaycollector-endpoint = Конечная точка коллектора Риплеев
 settings-patch-repo = Репозитория Патчей
 settings-patch-usetango = Использовать репозиторий патчей по умолчанию из Tango
+settings-matchmaking-usecnserver = Использовать китайский сервер Trill (регион заблокирован)
 settings-enable-patch-autoupdate = Включить авто обновление
 settings-data-path = Путь к данным
     .open = Открыть
