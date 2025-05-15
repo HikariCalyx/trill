@@ -43,6 +43,12 @@ struct Config {
 
     #[envconfig(from = "TURN_ADDR", default = "")]
     turn_addr: String,
+
+    #[envconfig(from = "TURN_USER", default = "")]
+    turn_user: String,
+
+    #[envconfig(from = "TURN_CREDENTIAL", default = "")]
+    turn_cred: String,
 }
 
 struct State {
@@ -217,9 +223,9 @@ async fn main() -> anyhow::Result<()> {
             config.metered_application_name.clone(),
             config.metered_api_key.clone(),
         )))
-    } else if !config.turn_addr.is_empty() {
+    } else if !config.turn_addr.is_empty() && !config.turn_user.is_empty() && !config.turn_cred.is_empty() {
         log::info!("using plain turn iceconfig backend");
-        Some(Box::new(iceconfig::turn::Backend::new(config.turn_addr.clone())))
+        Some(Box::new(iceconfig::turn::Backend::new(config.turn_addr.clone(), config.turn_user.clone(), config.turn_cred.clone())))
     } else {
         log::warn!("no iceconfig backend, will not service iceconfig requests");
         None
