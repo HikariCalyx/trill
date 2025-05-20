@@ -216,6 +216,35 @@ fn show_general_tab(ui: &mut egui::Ui, config: &mut config::Config, font_familie
             }
 
             {
+                ui.strong(i18n::LOCALES.lookup(&config.language, "settings-input-socd-resolution").unwrap());
+
+                let natural_label = i18n::LOCALES
+                    .lookup(&config.language, "settings-input-socd-resolution.natural")
+                    .unwrap();
+                let neutral_label = i18n::LOCALES
+                    .lookup(&config.language, "settings-input-socd-resolution.neutral")
+                    .unwrap();
+                let last_input_priority_label = i18n::LOCALES
+                    .lookup(&config.language, "settings-input-socd-resolution.last-input-priority")
+                    .unwrap();
+
+                egui::ComboBox::from_id_source("settings-window-general-use-relay")
+                    .width(200.0)
+                    .selected_text(match config.socd_resolution {
+                        0 => natural_label.clone(),
+                        1 => neutral_label.clone(),
+                        //2 => last_input_priority_label.clone(),
+                        _ => natural_label.clone(),
+                    })
+                    .show_ui(ui, |ui| {
+                        ui.selectable_value(&mut config.socd_resolution, 0, &natural_label);
+                        ui.selectable_value(&mut config.socd_resolution, 1, &neutral_label);
+                        //ui.selectable_value(&mut config.socd_resolution, 2, &last_input_priority_label);
+                    });
+                ui.end_row();
+            }
+
+            {
                 if ui.add(egui::Button::new(i18n::LOCALES.lookup(&config.language, "settings-exit").unwrap())).clicked() {
                     process::exit(0);
                 }

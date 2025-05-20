@@ -1,5 +1,6 @@
 use crate::controller::{ControllerAxis, ControllerButton};
 use crate::keyboard::Key;
+use crate::config;
 pub type State = input_helper::State<Key, ControllerButton>;
 
 #[derive(Clone, Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
@@ -138,20 +139,54 @@ impl Default for Mapping {
 
 impl Mapping {
     pub fn to_mgba_keys(&self, input: &State) -> u32 {
+        let config = config::Config::load_or_create();
+        let socd_resolution = config.unwrap().socd_resolution.clone();
         (if self.left.iter().any(|c| c.is_active(input)) {
-            mgba::input::keys::LEFT
+            if self.right.iter().any(|c| c.is_active(input)) {
+                match socd_resolution {
+                    1=>0,
+                    2=>mgba::input::keys::RIGHT,
+                    _=>mgba::input::keys::LEFT,
+                }
+            } else {
+                mgba::input::keys::LEFT
+            }
         } else {
             0
         }) | (if self.right.iter().any(|c| c.is_active(input)) {
-            mgba::input::keys::RIGHT
+            if self.left.iter().any(|c| c.is_active(input)) {
+                match socd_resolution {
+                    1=>0,
+                    2=>mgba::input::keys::LEFT,
+                    _=>mgba::input::keys::RIGHT,
+                }
+            } else {
+                mgba::input::keys::RIGHT
+            }
         } else {
             0
         }) | (if self.up.iter().any(|c| c.is_active(input)) {
-            mgba::input::keys::UP
+            if self.down.iter().any(|c| c.is_active(input)) {
+                match socd_resolution {
+                    1=>0,
+                    2=>mgba::input::keys::DOWN,
+                    _=>mgba::input::keys::UP,
+                }
+            } else {
+                mgba::input::keys::UP
+            }
         } else {
             0
         }) | (if self.down.iter().any(|c| c.is_active(input)) {
-            mgba::input::keys::DOWN
+            if self.up.iter().any(|c| c.is_active(input)) {
+                match socd_resolution {
+                    1=>0,
+                    2=>mgba::input::keys::UP,
+                    _=>mgba::input::keys::DOWN,
+                }
+            } else {
+                mgba::input::keys::DOWN
+            }
         } else {
             0
         }) | (if self.a.iter().any(|c| c.is_active(input)) {
