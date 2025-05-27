@@ -35,6 +35,7 @@ settings-replaycollector-endpoint = Eindpunt replay verzamelaar
 settings-patch-repo = Patches repository
 settings-patch-usetango = Gebruik standaard patch repository van Tango
 settings-enable-patch-autoupdate = Autoupdate inschakelen
+settings-quick-initialize = Snelle initialisatie
 settings-data-path = Gegevenspad
     .open = Openen
     .change = Wijzigen

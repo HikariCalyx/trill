@@ -39,6 +39,7 @@ settings-patch-repo = 補丁倉庫
 settings-patch-usetango = 使用 Tango 的缺省補丁倉庫
 settings-matchmaking-usecnserver = 使用 Trill 中國大陸伺服 (區域鎖定)
 settings-enable-patch-autoupdate = 自動更新
+settings-quick-initialize = 快速初始化
 settings-data-path = 數據路徑
     .open = 打開
     .change = 改變

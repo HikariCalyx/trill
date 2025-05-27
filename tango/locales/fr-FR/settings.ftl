@@ -35,6 +35,7 @@ settings-patch-usetango = Utiliser le référentiel de correctifs par défaut de
 settings-replaycollector-endpoint = Point d'arrivée de récolteur de matchs passés
 settings-patch-repo = Dépôt des patchs
 settings-enable-patch-autoupdate = Activer la mise à jour automatique
+settings-quick-initialize = Initialisation rapide
 settings-data-path = Chemin des données
     .open = Ouvrir
     .change = Changer

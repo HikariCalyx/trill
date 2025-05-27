@@ -35,6 +35,7 @@ settings-replaycollector-endpoint = Endpoint do coletor de gravações
 settings-patch-repo = Repositório de patches
 settings-patch-usetango = Usar repositório de patch padrão do Tango
 settings-enable-patch-autoupdate = Ativar atualização automática
+settings-quick-initialize = Inicialização rápida
 settings-data-path = Caminho de dados
     .open = Abrir
     .change = Mudar

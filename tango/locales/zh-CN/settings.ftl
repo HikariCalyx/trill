@@ -39,6 +39,7 @@ settings-replaycollector-endpoint = 回放收集器端点
 settings-patch-repo = 补丁仓库
 settings-patch-usetango = 使用 Tango 的默认补丁仓库
 settings-enable-patch-autoupdate = 自动更新
+settings-quick-initialize = 快速初始化包
 settings-data-path = 数据路径
     .open = 打开
     .change = 改变

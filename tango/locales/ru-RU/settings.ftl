@@ -35,6 +35,7 @@ settings-patch-repo = Репозитория Патчей
 settings-patch-usetango = Использовать репозиторий патчей по умолчанию из Tango
 settings-matchmaking-usecnserver = Использовать китайский сервер Trill (регион заблокирован)
 settings-enable-patch-autoupdate = Включить авто обновление
+settings-quick-initialize = Быстрая инициализация
 settings-data-path = Путь к данным
     .open = Открыть
     .change = Изменить

@@ -39,6 +39,7 @@ settings-replaycollector-endpoint = 리플레이 콜렉터 엔드포인트
 settings-patch-repo = 패치 리포지토리
 settings-patch-usetango=Tango의 기본 패치 리포지토리 사용
 settings-enable-patch-autoupdate = 자동 업데이트
+settings-quick-initialize = 빠른 초기화
 settings-data-path = 데이터 경로
     .open = 열기
     .change = 변경

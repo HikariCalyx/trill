@@ -39,6 +39,7 @@ settings-replaycollector-endpoint = リプレイコレクターエンドポイ�
 settings-patch-repo = パッチリポジトリ
 settings-patch-usetango = Tangoのデフォルトのパッチリポジトリを使用する
 settings-enable-patch-autoupdate = 自動更新
+settings-quick-initialize = 高速初期化
 settings-data-path = データ経路
     .open = 開く
     .change = 変更

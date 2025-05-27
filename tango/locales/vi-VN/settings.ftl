@@ -35,6 +35,7 @@ settings-replaycollector-endpoint = Điểm cuối thu thập replay
 settings-patch-repo = Kho lưu trữ bản vá
 settings-patch-usetango = Sử dụng kho bản vá mặc định từ Tango
 settings-enable-patch-autoupdate = Bật tự động cập nhật
+settings-quick-initialize = Khởi tạo nhanh
 settings-data-path = Đường dẫn dữ liệu
     .open = Mở
     .change = Thay đổi

@@ -43,6 +43,7 @@ settings-replaycollector-endpoint = Replay collector endpoint
 settings-patch-repo = Patches repository
 settings-patch-usetango = Use default patch repository from Tango
 settings-enable-patch-autoupdate = Enable autoupdate
+settings-quick-initialize = Quick Initialization
 settings-data-path = Data path
     .open = Open
     .change = Change
