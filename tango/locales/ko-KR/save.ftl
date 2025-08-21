@@ -1,12 +1,12 @@
 save-tab-cover = 커버
-save-tab-navi = 내비게이션
+save-tab-navi = 넷 내비
 save-tab-folder = 칩 폴더
 save-tab-patch-cards = 개조 카드
 save-tab-auto-battle-data = ABD
 save-cover-description = 이 탭은 의도적으로 비워 둡니다.
 save-group = 칩 그룹화
-auto-battle-data-secondary-standard-chips = 표준 칩(2차)
-auto-battle-data-standard-chips = 표준 칩
+auto-battle-data-secondary-standard-chips = 스탠더드 칩(2차)
+auto-battle-data-standard-chips = 스탠더드 칩
 auto-battle-data-mega-chips = 메가칩
 auto-battle-data-giga-chip = 기가칩
 auto-battle-data-combos = 콤보

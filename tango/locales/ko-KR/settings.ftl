@@ -60,4 +60,4 @@ settings-use-relay = 릴레이 사용
     .auto = 자동
     .always = 항상
     .never = 안함
-settings-speed-change = 속도 변경량
+settings-speed-change = 배속
