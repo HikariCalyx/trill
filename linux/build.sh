@@ -9,7 +9,7 @@ trap cleanup EXIT
 cleanup
 
 # Grab a copy of appimagetool.
-wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+wget -c https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
 chmod a+x appimagetool-x86_64.AppImage
 
 # Build Linux binaries.
