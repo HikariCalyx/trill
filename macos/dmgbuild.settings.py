@@ -1,7 +1,7 @@
 format = "UDBZ"
 files = ["Trill.app"]
 
-badge_icon = "Tango.app/Contents/Resources/Trill.icns"
+badge_icon = "Trill.app/Contents/Resources/Trill.icns"
 
 symlinks = {"Applications": "/Applications"}
 icon_locations = {"Trill.app": (140, 120), "Applications": (500, 120)}

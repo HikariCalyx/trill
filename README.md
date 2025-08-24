@@ -50,6 +50,13 @@ We assume you're using Ubuntu or Debian.
     sudo apt-get install -y libssl-dev libglib2.0-dev pkg-config cmake build-essential libclang-dev libgtk-3-dev librust-alsa-sys-dev libasound2-dev curl wget git libfuse2
     ```
 
+1.  Clone this repository.
+
+    ```sh
+    git clone --recurse-submodules https://github.com/HikariCalyx/trill
+    cd trill
+    ```
+
 1.  Run the build script. It will create an AppImage in the dist directory.
 
     ```sh
@@ -89,6 +96,13 @@ We assume you're using Ubuntu or Debian.
     sudo update-alternatives --install /usr/bin/x86_64-w64-mingw32-g++ x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-win32 60 &&
     sudo update-alternatives --install /usr/bin/x86_64-w64-mingw32-g++ x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix 90 &&
     sudo update-alternatives --config x86_64-w64-mingw32-g++
+    ```
+
+1.  Clone this repository.
+
+    ```sh
+    git clone --recurse-submodules https://github.com/HikariCalyx/trill
+    cd trill
     ```
 
 1.  Build it.
@@ -132,12 +146,67 @@ The result made by Debian 11 amd64 is guaranteed to work.
     sudo update-alternatives --config i686-w64-mingw32-g++
     ```
 
+1.  Clone this repository.
+
+    ```sh
+    git clone --recurse-submodules https://github.com/HikariCalyx/trill
+    cd trill
+    ```
+
 1.  Build the installer.
 
     ```sh
     bash ./win/build_i686.sh
     ```
 
+
+## Building (macOS)
+
+You're required to use macOS 11 or newer, due to Universal 2 binary support is implemented since this version.
+
+1. [Install Homebrew](https://brew.sh/).
+
+1. Install Rust.
+
+    ```sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    ```
+
+1. Install the Rust target for the opposite architecture from your current Mac.
+
+    ```sh
+    # For Apple Silicon Mac, install the x86_64 target
+    rustup target add x86_64-apple-darwin
+    # For Intel Mac, install the aarch64 target
+    rustup target add aarch64-apple-darwin
+    ```
+
+1.  Install required dependencies.
+
+    ```sh
+    brew install wget
+    sudo pip3 install semver==3.0.0-dev3 toml dmgbuild pyobjc-framework-Quartz==10.3.2 mako pyobjc-core==10.3.2
+    # Since homebrew has removed legacy version of cmake (3.18.4), we need to install manually.
+    curl -LO https://github.com/Kitware/CMake/releases/download/v3.18.4/cmake-3.18.4.tar.gz
+    tar -xzvf cmake-3.18.4.tar.gz
+    cd cmake-3.18.4
+    ./bootstrap
+    make -j$(sysctl -n hw.logicalcpu)
+    sudo make install
+    ```
+
+1.  Clone this repository.
+
+    ```sh
+    git clone --recurse-submodules https://github.com/HikariCalyx/trill
+    cd trill
+    ```
+
+1.  Build the DMG.
+
+    ```sh
+    bash ./macos/build.sh
+    ```
 
 ### Server
 
@@ -148,6 +217,8 @@ If you already have Rust and Perl installed ([on Windows, try Strawberry Perl](h
 ```sh
 cargo build --release --bin tango-signaling-server
 ```
+
+Or, you can download prebuilt server binary from here: https://github.com/HikariCalyx/tango-matchmaking-server/releases/latest
 
 ## Language support
 
