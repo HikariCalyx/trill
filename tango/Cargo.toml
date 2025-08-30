@@ -1,6 +1,6 @@
 [package]
 name = "tango"
-version = "4.2.5"
+version = "4.2.6-250831-0631"
 edition = "2021"
 license = "AGPL-3.0-or-later"
 default-run = "tango"
@@ -122,3 +122,55 @@ embed-resource = "1"
 
 [lints]
 workspace = true
+
+[target.'cfg(target_os = "android")'.dependencies]
+sdl2 = { version = "0.37", features = ["static-link", "bundled"] }
+
+# necessary for android + wasm builds
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.android]
+package = "com.hikaricalyx.trill"
+apk_name = "trill"
+build_targets = ["armv7-linux-androideabi", "aarch64-linux-android"]
+assets = "cache/android_assets"
+resources = "android_res"
+
+[package.metadata.android.sdk]
+min_sdk_version = 30
+max_sdk_version = 35
+
+[[package.metadata.android.uses_permission]]
+name = "android.permission.INTERNET"
+
+[[package.metadata.android.uses_permission]]
+name = "android.permission.CHANGE_WIFI_MULTICAST_STATE"
+
+[[package.metadata.android.uses_permission]]
+name = "android.permission.WAKE_LOCK"
+
+[package.metadata.android.application.activity]
+launch_mode = "singleInstance"
+orientation = "sensorLandscape"
+
+[package.metadata.android.application]
+label = "Trill"
+theme = "@style/Theme"
+icon = "@mipmap/ic_launcher"
+
+[features]
+record_simulation_flow = []
+
+# keystores
+[package.metadata.android.signing.dev]
+path = "debug.keystore"
+keystore_password = "android"
+
+[package.metadata.android.signing.debug]
+path = "debug.keystore"
+keystore_password = "android"
+
+[package.metadata.android.signing.release]
+path = "release.keystore"
+keystore_password = "android"
