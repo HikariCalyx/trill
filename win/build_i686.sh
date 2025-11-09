@@ -8,6 +8,16 @@ function cleanup {
 trap cleanup EXIT
 cleanup
 
+# Detect Nsis7z plugin
+if [ -f /usr/share/nsis/Plugins/x86-unicode/nsis7z.dll ]; then
+    echo -e "Error: Nsis7z plugin is not installed. Please place nsis7z.dll to following directory: "
+    echo -e "/usr/share/nsis/Plugins/x86-unicode/"
+    echo -e ""
+    echo -e "You can download from here: https://nsis.sourceforge.io/mediawiki/images/6/69/Nsis7z_19.00.7z"
+    echo -e "Exiting..."
+    exit 1
+fi
+
 # Generate an appropriate .rc file.
 tools/mako_generate.py "$(dirname "${BASH_SOURCE[0]}")/resource.rc.mako" >tango/resource.rc
 

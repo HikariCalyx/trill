@@ -89,7 +89,7 @@ Section
     WriteUninstaller "$INSTDIR\\uninstall.exe"
     WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "DisplayName" "<%text>$</%text>{NAME}"
     WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "DisplayIcon" "$INSTDIR\\trill.exe,0"
-    WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "Publisher" "The Trill Developers"
+    WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "Publisher" "Hikari Calyx Tech"
     WriteRegStr HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "InstallLocation" "$INSTDIR"
 
     IntFmt $0 "0x%08X" "{version.major}"
@@ -108,6 +108,29 @@ Section
 
     WriteRegDWORD HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "NoModify" 1
     WriteRegDWORD HKCU "<%text>$</%text>{REGPATH_UNINSTSUBKEY}" "NoRepair" 1
+
+    StrCpy $3 "$DOCUMENTS"
+    StrCpy $4 "$3\Trill\roms"
+    StrCpy $5 "$3\Trill\patches"
+
+    IfFileExists "$EXEDIR\roms.7z" +2
+        goto skip1
+    SetOutPath $4
+    Nsis7z::ExtractWithDetails "$EXEDIR\roms.7z" "ROM images detected, extracting..."
+    goto done1
+    skip1:
+    DetailPrint "roms.7z not found, skipping."
+    done1:
+    
+    IfFileExists "$EXEDIR\patches.7z" +2
+        goto skip2
+    SetOutPath $5
+    Nsis7z::ExtractWithDetails "$EXEDIR\patches.7z" "Patches detected, extracting..."
+    goto done2
+    skip2:
+    DetailPrint "patches.7z not found, skipping."
+    done2:
+
     CreateShortcut "$SMPROGRAMS\\Trill.lnk" "$INSTDIR\\trill.exe"
     CreateShortcut "$DESKTOP\\Trill.lnk" "$INSTDIR\\trill.exe"
 SectionEnd
