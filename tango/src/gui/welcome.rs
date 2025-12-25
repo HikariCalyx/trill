@@ -1,5 +1,6 @@
 use crate::{config, game, gui, i18n};
 use fluent_templates::Loader;
+use std::fs;
 
 pub struct State {
     nickname: String,
@@ -13,6 +14,11 @@ impl State {
             done_inputting_roms: false,
         }
     }
+}
+
+fn is_running_under_winlator() -> bool {
+    let wine_path = r"Z:/lib/ld-linux-aarch64.so.1";
+    fs::metadata(wine_path).map(|m| m.is_file()).unwrap_or(false)
 }
 
 pub fn show(

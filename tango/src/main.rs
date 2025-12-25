@@ -32,6 +32,7 @@ mod video;
 
 use fluent_templates::Loader;
 use keyboard::Key;
+use std::fs;
 
 const TANGO_CHILD_ENV_VAR: &str = "TANGO_CHILD";
 
@@ -67,6 +68,10 @@ fn main() -> Result<(), anyhow::Error> {
         .init();
 
     log::info!("welcome to trill {}!", version::current());
+
+    if is_running_under_winlator() {
+        log::info!("Winlator DETECTED");
+    }
 
     if std::env::var(TANGO_CHILD_ENV_VAR).unwrap_or_default() == "1" {
         return child_main(config);
@@ -114,6 +119,21 @@ fn main() -> Result<(), anyhow::Error> {
     writeln!(&mut log_file, "exit status: {:?}", status)?;
 
     if !status.success() {
+        if is_running_under_winlator() {
+        rfd::MessageDialog::new()
+            .set_title(&i18n::LOCALES.lookup(&config.language, "window-title").unwrap())
+            .set_description(
+                &i18n::LOCALES
+                    .lookup_with_args(
+                        &config.language,
+                        "crash-winlator",
+                        &std::collections::HashMap::from([("path", format!("{}", log_path.display()).into())]),
+                    )
+                    .unwrap(),
+            )
+            .set_level(rfd::MessageLevel::Error)
+            .show();
+        } else {
         rfd::MessageDialog::new()
             .set_title(&i18n::LOCALES.lookup(&config.language, "window-title").unwrap())
             .set_description(
@@ -127,6 +147,7 @@ fn main() -> Result<(), anyhow::Error> {
             )
             .set_level(rfd::MessageLevel::Error)
             .show();
+        }
     }
 
     if let Some(code) = status.code() {
@@ -503,4 +524,9 @@ fn child_main(mut config: config::Config) -> Result<(), anyhow::Error> {
     })?;
 
     Ok(())
+}
+
+fn is_running_under_winlator() -> bool {
+    let wine_path = r"Z:/lib/ld-linux-aarch64.so.1";
+    fs::metadata(wine_path).map(|m| m.is_file()).unwrap_or(false)
 }
