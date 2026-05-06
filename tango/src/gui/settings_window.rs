@@ -549,7 +549,7 @@ fn show_netplay_tab(ui: &mut egui::Ui, config: &mut config::Config) {
             }
             match config.language == "zh-CN" {
                 true => if ui.add(egui::Button::new(i18n::LOCALES.lookup(&config.language, "settings-matchmaking-usecnserver").unwrap())).clicked() {
-                    config.matchmaking_endpoint = String::from("wss://matchmakingcn.trill.hikaricalyx.com");
+                    config.matchmaking_endpoint = String::from("wss://matchmakingcn.trill.hikaricalyx.cn");
                 }
                 false => {}
             }
