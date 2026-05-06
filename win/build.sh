@@ -9,7 +9,7 @@ trap cleanup EXIT
 cleanup
 
 # Detect Nsis7z plugin
-if [ -f /usr/share/nsis/Plugins/x86-unicode/nsis7z.dll ]; then
+if [ ! -f /usr/share/nsis/Plugins/x86-unicode/nsis7z.dll ]; then
     echo -e "Error: Nsis7z plugin is not installed. Please place nsis7z.dll to following directory: "
     echo -e "/usr/share/nsis/Plugins/x86-unicode/"
     echo -e ""
