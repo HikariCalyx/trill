@@ -293,5 +293,5 @@ impl Config {
     }
 }
 
-pub const DEFAULT_MATCHMAKING_ENDPOINT: &str = "ws://matchmaking.trill.hikaricalyx.com";
+pub const DEFAULT_MATCHMAKING_ENDPOINT: &str = "wss://matchmaking.trill.hikaricalyx.com";
 pub const DEFAULT_PATCH_REPO: &str = "https://patches.trill.hikaricalyx.com";
