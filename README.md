@@ -38,16 +38,16 @@ Trill is named after the NetNavi of same name in Rockman.EXE BEAST anime.
 
 We assume you're using Ubuntu or Debian.
 
-1.  Install Rust.
-
-    ```sh
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    ```
-
 1.  Install required dependencies.
 
     ```sh
     sudo apt-get install -y libssl-dev libglib2.0-dev pkg-config cmake build-essential libclang-dev libgtk-3-dev librust-alsa-sys-dev libasound2-dev curl wget git libfuse2
+    ```
+
+1.  Install Rust.
+
+    ```sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     ```
 
 1.  Clone this repository.
@@ -67,6 +67,13 @@ We assume you're using Ubuntu or Debian.
 
 ## Building (Windows Binary)
 
+1.  Install mingw-w64 and all other required dependencies.
+
+    ```sh
+    sudo apt-get install -y libssl-dev libglib2.0-dev pkg-config cmake build-essential libclang-dev libgtk-3-dev librust-alsa-sys-dev libasound2-dev curl wget git mingw-w64 clang nsis python3-pip python3-dev p7zip-full imagemagick libarchive-tools
+    pip install mako semver toml
+    ```
+
 1.  Install Rust.
 
     ```sh
@@ -78,13 +85,6 @@ We assume you're using Ubuntu or Debian.
     ```sh
     rustup target add x86_64-pc-windows-gnu
     rustup toolchain install stable-x86_64-pc-windows-gnu
-    ```
-
-1.  Install mingw-w64 and all other required dependencies.
-
-    ```sh
-    sudo apt-get install -y libssl-dev libglib2.0-dev pkg-config cmake build-essential libclang-dev libgtk-3-dev librust-alsa-sys-dev libasound2-dev curl wget git mingw-w64 clang nsis python3-pip python3-dev p7zip-full imagemagick libarchive-tools
-    pip install mako semver toml
     ```
 
 1.  Ensure mingw-w64 is using the POSIX threading model.
