@@ -231,7 +231,7 @@ impl Config {
 
     pub fn load_or_create() -> Result<Self, anyhow::Error> {
         let config_path = get_config_path()?;
-        let config = match std::fs::File::open(config_path) {
+        let mut config = match std::fs::File::open(config_path) {
             Ok(mut file) => {
                 let mut contents = String::new();
                 file.read_to_string(&mut contents)?;
@@ -248,6 +248,16 @@ impl Config {
                 return Err(e.into());
             }
         };
+        // If the user's saved language is no longer available, fall back to zh-CN.
+        let available: Vec<_> = i18n::LOCALES.locales().cloned().collect();
+        if !available.iter().any(|l| l.matches(&config.language, false, false)) {
+            log::info!(
+                "language {:?} is no longer available, falling back to {:?}",
+                config.language,
+                i18n::FALLBACK_LANG
+            );
+            config.language = i18n::FALLBACK_LANG.clone();
+        }
         Ok(config)
     }
 

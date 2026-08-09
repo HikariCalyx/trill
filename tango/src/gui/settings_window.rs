@@ -720,8 +720,6 @@ fn show_about_tab(ui: &mut egui::Ui) {
         ui.horizontal_wrapped(|ui| {
             ui.spacing_mut().item_spacing.x = 0.0;
             ui.hyperlink_to("Trill", "https://trill.hikaricalyx.com");
-            ui.label(", as well as it's parent project ");
-            ui.hyperlink_to("Tango", "https://tango.n1gp.net");
             ui.label(" would not be a reality without the work of the many people who have helped make this possible.");
         });
 
@@ -878,44 +876,6 @@ fn show_about_tab(ui: &mut egui::Ui) {
             ui.label(" • ");
             ui.horizontal_wrapped(|ui| {
                 ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("Japanese: ");
-
-                ui.hyperlink_to("weenie", "https://github.com/bigfarts");
-
-                ui.label(", ");
-
-                ui.hyperlink_to("Nonstopmop", "https://twitter.com/seventhfonist42");
-
-                ui.label(", ");
-
-                ui.hyperlink_to("dhenva", "https://twitch.tv/dhenva");
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("Korean (South Korea): ");
-
-                ui.hyperlink_to("Hikari Calyx", "https://twitter.com/Hikari_Calyx");
-
-                ui.label(", ");
-
-                ui.hyperlink_to("Gyuyeong", "https://github.com/Gyuyeong");
-
-                ui.label(", ");
-
-                ui.hyperlink_to("namu.wiki Contributors", "https://namu.wiki/w/%EB%A1%9D%EB%A7%A8%20%EC%97%90%EA%B7%B8%EC%A0%9C%20%EC%96%B4%EB%93%9C%EB%B0%B4%EC%8A%A4%EB%93%9C%20%EC%BB%AC%EB%A0%89%EC%85%98");
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
                 ui.label("Mandarin (mainland China): ");
 
                 ui.hyperlink_to("weenie", "https://github.com/bigfarts");
@@ -938,106 +898,6 @@ fn show_about_tab(ui: &mut egui::Ui) {
                 ui.label(", ");
 
                 ui.hyperlink_to("Hikari Calyx", "https://twitter.com/Hikari_Calyx");
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("Spanish (Latin America): ");
-
-                ui.hyperlink_to("Karate_Bugman", "https://twitter.com/Karate_Bugman");
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("Portuguese (Brazil): ");
-
-                ui.hyperlink_to("Darkgaia", "https://ayo.so/darkgaiagames");
-
-                ui.label(", ");
-
-                ui.hyperlink_to("mushiguchi", "https://twitter.com/mushiguchi");
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("French (France): ");
-
-                ui.hyperlink_to("Sheriel Phoenix", "https://twitter.com/Sheriel_Phoenix");
-
-                ui.label(", ");
-
-                ui.hyperlink_to("Justplay", "https://twitter.com/justplayfly");
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("German (Germany): ");
-
-                ui.hyperlink_to("KenDeep", "https://twitch.tv/kendeep_fgc");
-
-                ui.label(", ");
-
-                ui.hyperlink_to("ChinaTV", "https://twitter.com/ChinaTV9");
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("Vietnamese: ");
-
-                ui.hyperlink_to("ExeDesmond", "https://twitter.com/exedesmond");
-
-                ui.label(", ");
-
-                ui.hyperlink_to("ShironaNep", "https://www.youtube.com/user/minhduc1411vip");
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("Russian (Russia): ");
-
-                ui.label("Passbyword");
-
-                ui.label(", ");
-
-                ui.hyperlink_to(
-                    "Sest0E1emento5",
-                    "https://www.youtube.com/channel/UCwpjuY9bYqNzsUG1QP50PLQ",
-                );
-            });
-        });
-
-        ui.horizontal(|ui| {
-            ui.spacing_mut().item_spacing.x = 0.0;
-            ui.label(" • ");
-            ui.horizontal_wrapped(|ui| {
-                ui.spacing_mut().item_spacing.x = 0.0;
-                ui.label("Dutch (Netherlands): ");
-
-                ui.hyperlink_to("Virillion", "https://twitter.com/Virillion");
             });
         });
 
