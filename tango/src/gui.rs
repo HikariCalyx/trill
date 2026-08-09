@@ -1,6 +1,6 @@
 use fluent_templates::Loader;
 
-use crate::{audio, config, discord, game, i18n, input, patch, rom, save, session, stats, updater};
+use crate::{audio, config, game, i18n, input, patch, rom, save, session, stats, updater};
 use std::str::FromStr;
 
 mod debug_window;
@@ -87,7 +87,6 @@ pub struct SharedRootState {
     pub audio_binder: audio::LateBinder,
     pub fps_counter: std::sync::Arc<parking_lot::Mutex<stats::Counter>>,
     pub emu_tps_counter: std::sync::Arc<parking_lot::Mutex<stats::Counter>>,
-    pub discord_client: discord::Client,
     pub font_families: FontFamilies,
     pub ui_windows: ui_windows::UiWindows,
     pub selection: Option<Selection>,
@@ -113,7 +112,6 @@ impl State {
         ctx: &egui::Context,
         show_updater: bool,
         config: std::sync::Arc<parking_lot::RwLock<config::Config>>,
-        discord_client: discord::Client,
         audio_binder: audio::LateBinder,
         fps_counter: std::sync::Arc<parking_lot::Mutex<stats::Counter>>,
         emu_tps_counter: std::sync::Arc<parking_lot::Mutex<stats::Counter>>,
@@ -197,7 +195,6 @@ impl State {
                 emu_tps_counter,
                 font_families,
                 ui_windows: Default::default(),
-                discord_client,
                 selection: committed_selection,
             },
             last_mouse_motion_time: None,

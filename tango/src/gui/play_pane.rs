@@ -1,4 +1,4 @@
-use crate::{audio, config, discord, game, gui, i18n, net, patch, randomcode, rom, session, stats, sync};
+use crate::{audio, config, game, gui, i18n, net, patch, randomcode, rom, session, stats, sync};
 use fluent_templates::Loader;
 use rand::RngCore;
 use sha3::digest::{ExtendableOutput, Update};
@@ -1316,7 +1316,6 @@ fn show_bottom_pane(
         }
     }
 
-    let discord_client = &shared_root_state.discord_client;
     let roms = shared_root_state.roms_scanner.read();
     let patches = shared_root_state.patches_scanner.read();
 
@@ -1361,20 +1360,7 @@ fn show_bottom_pane(
                                     });
                                 });
                             });
-                            discord_client.set_current_activity(Some(discord::make_looking_activity(
-                                link_code,
-                                &config.language,
-                                selection.as_ref().map(|selection| {
-                                    discord::make_game_info(
-                                        selection.game,
-                                        selection
-                                            .patch
-                                            .as_ref()
-                                            .map(|(patch_name, patch_version, _)| (patch_name.as_str(), patch_version)),
-                                        &config.language,
-                                    )
-                                }),
-                            )));
+
                         }
                         ConnectionState::InLobby(lobby) => {
                             let mut lobby = lobby.blocking_lock();
@@ -1383,28 +1369,13 @@ fn show_bottom_pane(
                                 lobby.attention_requested = true;
                             }
 
-                            discord_client.set_current_activity(Some(discord::make_in_lobby_activity(
-                                &lobby.link_code,
-                                &config.language,
-                                lobby.local_selection.as_ref().map(|selection| {
-                                    discord::make_game_info(
-                                        selection.game,
-                                        selection
-                                            .patch
-                                            .as_ref()
-                                            .map(|(patch_name, patch_version, _)| (patch_name.as_str(), patch_version)),
-                                        &config.language,
-                                    )
-                                }),
-                            )));
+
 
                             ui.add_enabled_ui(lobby.local_negotiated_state.is_none() && lobby.sender.is_some(), |ui| {
                                 show_lobby_table(ui, cancellation_token, config, &mut lobby, &roms, &patches);
                             });
                         }
                     }
-                } else {
-                    discord_client.set_current_activity(Some(discord::make_base_activity(None)));
                 }
             }
 
@@ -1535,11 +1506,6 @@ fn show_bottom_pane(
 
                     if let Some(init_link_code) = init_link_code.take() {
                         *link_code = init_link_code.to_string();
-                        submitted = true;
-                    }
-
-                    if let Some(join_secret) = discord_client.take_current_join_secret() {
-                        *link_code = join_secret.to_string();
                         submitted = true;
                     }
 

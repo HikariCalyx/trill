@@ -1,4 +1,4 @@
-use crate::{config, discord, gui, i18n, input, session, sync, video};
+use crate::{config, gui, i18n, input, session, sync, video};
 use fluent_templates::Loader;
 mod replay_controls_window;
 
@@ -105,7 +105,6 @@ pub fn show(
     state: &mut State,
 ) {
     let language = &config.language;
-    let discord_client = &shared_root_state.discord_client;
     let input_mapping = &config.input_mapping;
     let video_filter = &config.video_filter;
     let integer_scaling = config.integer_scaling;
@@ -121,35 +120,6 @@ pub fn show(
         } else {
             Some(gui::escape_window::State::new())
         };
-    }
-
-    let game_info = session.game_info();
-    match session.mode() {
-        session::Mode::SinglePlayer(_) => {
-            discord_client.set_current_activity(Some(discord::make_single_player_activity(
-                session.start_time(),
-                language,
-                Some(discord::make_game_info(
-                    game_info.game,
-                    game_info.patch.as_ref().map(|(name, version)| (name.as_str(), version)),
-                    language,
-                )),
-            )));
-        }
-        session::Mode::PvP(_) => {
-            discord_client.set_current_activity(Some(discord::make_in_progress_activity(
-                session.start_time(),
-                language,
-                Some(discord::make_game_info(
-                    game_info.game,
-                    game_info.patch.as_ref().map(|(name, version)| (name.as_str(), version)),
-                    language,
-                )),
-            )));
-        }
-        session::Mode::Replayer => {
-            discord_client.set_current_activity(Some(discord::make_base_activity(None)));
-        }
     }
 
     match session.mode() {

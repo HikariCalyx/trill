@@ -10,7 +10,6 @@ extern crate lazy_static;
 mod audio;
 mod config;
 mod controller;
-mod discord;
 mod game;
 mod graphics;
 mod gui;
@@ -257,8 +256,6 @@ fn child_main(mut config: config::Config) -> Result<(), anyhow::Error> {
         }
     }
 
-    let discord_client = discord::Client::new();
-
     let roms_scanner = scanner::Scanner::new();
     let saves_scanner = scanner::Scanner::new();
     let patches_scanner = scanner::Scanner::new();
@@ -275,7 +272,6 @@ fn child_main(mut config: config::Config) -> Result<(), anyhow::Error> {
         egui_ctx,
         show_update_info,
         config.clone(),
-        discord_client,
         audio_binder.clone(),
         fps_counter.clone(),
         emu_tps_counter.clone(),

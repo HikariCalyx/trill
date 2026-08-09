@@ -141,8 +141,8 @@ pub fn show(
         gui::updater_window::show(ctx, &mut state.updater, &config.language, updater);
     }
 
-    // If a join is requested, switch immediately to the play tab.
-    if shared_root_state.discord_client.has_current_join_secret() || init_link_code.is_some() {
+    // If a link code is provided, switch immediately to the play tab.
+    if init_link_code.is_some() {
         state.tab = Tab::Play;
     }
 
